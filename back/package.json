@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node server.ts"
+    "start": "npx ts-node-dev --transpile-only --no-notify server.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +14,21 @@
   "devDependencies": {
     "@prisma/client": "^7.9.1",
     "@types/express": "^5.0.6",
+    "@types/node": "^25.2.0",
+    "@types/pg": "^8.16.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "prisma": "^7.9.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.3.0",
+    "pg": "^8.18.0"
+  },
+  "overrides": {
+    "lodash": "^4.17.21",
+    "hono": "^4.11.7"
   }
 }
