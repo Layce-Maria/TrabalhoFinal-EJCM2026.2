@@ -148,12 +148,8 @@ model Payment{
   status Boolean
   amount Float
 
-
-
   orderId String
   order Order @relation(fields: [orderId], references: [id])
-
-  
 
 }
 
