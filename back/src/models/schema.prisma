@@ -18,17 +18,20 @@ model User{
   lastName String
   password String
   phone String
-  dataOfBrirth String
+  dataOfBrirth DateTime @db.Date
   gender String
-
+  whishlist Whishlist[]
   cupons Cupom[]
   cart Cart?
+  reviewsId Review[]
 }
 
 model Cupom{
   id String @id @default(cuid())
   value Float
-
+  code String
+  expirationDate DateTime @db.Date
+  isActive Boolean @default(true)
   userId String
   user User @relation(fields: [userId], references: [id])
 
@@ -41,7 +44,9 @@ model Product {
   price Float
   rating Float
 
-
+  variants ProductVariant[]
+  whishlist Whishlist[]
+  reviewsId Review[]
   categoryId String
   category Category @relation(fields: [categoryId], references: [id])
 
@@ -59,4 +64,31 @@ model Cart{
   userId String @unique
   user User @relation( fields: [userId], references: [id])
   totalPrice Float
+
+  productsVariants ProductVariant[]
+}
+
+model ProductVariant{
+  id String @id @default(cuid())
+  products Product[]
+  carts Cart[]
+}
+
+model Whishlist{
+  userId String
+  user User @relation(fields: [userId],references: [id])
+
+  productId String
+  product Product @relation(fields: [productId], references: [id])
+
+  @@id([userId, productId])
+}
+model Review{
+  id String @id @default(cuid())
+  rating Float
+  comment String?
+  userId String
+  user User @relation(fields: [userId], references: [id])
+  productId String
+  product Product @relation(fields: [productId], references: [id])
 }
