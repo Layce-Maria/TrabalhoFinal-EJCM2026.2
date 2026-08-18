@@ -38,10 +38,9 @@ model Cupom{
   code String
   expirationDate DateTime @db.Date
   isActive Boolean @default(true)
+
   userId User[]
   cartsId Cart[]
-  
-
 }
 
 model Product {
@@ -62,8 +61,8 @@ model Product {
 model Category{
   id String @id @default(cuid())
   name String
-  products Product[]
 
+  products Product[]
 }
 
 model Cart{
@@ -123,8 +122,6 @@ model Order{
   shipping Shipping @relation("shippingOrder", fields: [shippingId], references: [id])
   orderItemId String @unique
   orderItem OrderItem @relation(fields: [orderItemId], references: [id])
- 
-
 }
 
 model Payment{
@@ -135,13 +132,8 @@ model Payment{
   status Boolean
   amount Float
 
-
-
   orderId String
   order Order @relation(fields: [orderId], references: [id])
-
-  
-
 }
 
 model Shipping{
@@ -164,7 +156,6 @@ model OrderItem{
   id String @id @default(cuid())
   quantity Int
   unitPrice Float
-
 
   OrderId Order?
   variantId String @unique
