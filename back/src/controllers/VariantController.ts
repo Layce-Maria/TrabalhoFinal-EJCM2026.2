@@ -97,6 +97,10 @@ export class VariantController {
             const {id} = req.params;
             const {quantityToAdd}=req.body;
 
+            if (typeof quantityToAdd !== 'number') {
+                return res.status(400).json({ error: "quantityToAdd deve ser um número" });
+            }
+
             const updatedStock = await prisma.ProductVariant.update({
                 where: {
                     id: id
