@@ -7,6 +7,7 @@ import { VariantController } from "../controllers/VariantController";
 import { authenticateJWT } from "../middlewares/Authenticate";
 import { WishListController } from "../controllers/WishListController";
 
+
 const router = Router();
 
 //User Routes
