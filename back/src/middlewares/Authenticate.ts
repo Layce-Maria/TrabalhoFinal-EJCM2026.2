@@ -24,7 +24,7 @@ passport.use(
     },
     async (payload: JwtPayload, done: VerifiedCallback) => {
       try {
-        const userId = Number(payload.sub);
+        const userId = String(payload.sub);
 
         if (!userId) return done(null, false);
 
