@@ -11,6 +11,9 @@ import { WishListController } from "../controllers/WishListController";
 const router = Router();
 
 //User Routes
+router.post("/users", UserController.create);
+router.post("/login", UserController.login);
+
 router.post("/users", authenticateJWT, UserController.create);
 router.get("/users/:id", authenticateJWT, UserController.getById);
 router.patch("/users/:id", authenticateJWT, UserController.update);
