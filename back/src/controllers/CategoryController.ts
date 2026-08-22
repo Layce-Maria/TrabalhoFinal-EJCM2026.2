@@ -13,6 +13,7 @@ export class CategoryController {
                 });
             }
 
+            //se existir categoria com o mesmo nome, retorna ela. se não, cria uma nova
             const existing = await prisma.category.findUnique({ 
                 where: { name } 
             });
@@ -36,7 +37,6 @@ export class CategoryController {
             });
         }
     }
-
     static async getById(req: Request, res: Response) {
         try {
             const { id } = req.params;
