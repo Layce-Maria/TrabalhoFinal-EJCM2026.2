@@ -6,6 +6,7 @@ import { VariantController } from "../controllers/VariantController";
 
 import { authenticateJWT } from "../middlewares/Authenticate";
 import { WishListController } from "../controllers/WishListController";
+import { OrderController } from "../controllers/OrderController";
 
 
 const router = Router();
@@ -38,5 +39,11 @@ router.post("/wishlist/:userId",authenticateJWT,  WishListController.create);
 router.get("/wishlist/:userId",authenticateJWT,  WishListController.get);
 router.delete("/wishlist/:userId/product/:productId", authenticateJWT, WishListController.deleteOne);
 router.delete("/wishlist/:userId",authenticateJWT, WishListController.deleteAll);
+
+//Order Routes
+router.post("/orders", authenticateJWT, OrderController.create);
+router.get("/orders/:id", authenticateJWT, OrderController.getById);
+router.patch("/orders/:id", authenticateJWT, OrderController.update);
+router.delete("/orders/:id", authenticateJWT, OrderController.delete);
 
 export default router;
