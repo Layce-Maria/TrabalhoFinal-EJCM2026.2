@@ -38,6 +38,10 @@ model Coupon{
   value          Float
   code           String
   expirationDate DateTime @db.Date
+  isActive Boolean @default(true)
+
+  userId User[]
+  cartsId Cart[]
   isActive       Boolean @default(true)
 
   createdAt      DateTime @default(now())
@@ -86,12 +90,15 @@ model ProductVariant{
 model Category{
   id         String @id @default(cuid())
   name       String
+  id         String @id @default(cuid())
+  name       String
 
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
   products   Product[]
 
+  products Product[]
 }
 
 model Cart{
@@ -164,6 +171,13 @@ model Order{
   address      String
   placedOn     DateTime @default(now())
 
+  userId String
+  user User @relation(fields: [userId], references: [id])
+  paymentId Payment[]
+  shippingId String @unique
+  shipping Shipping @relation("shippingOrder", fields: [shippingId], references: [id])
+  orderItemId String @unique
+  orderItem OrderItem @relation(fields: [orderItemId], references: [id])
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
@@ -186,6 +200,8 @@ model Payment{
   status          Boolean
   amount          Float
 
+  orderId String
+  order Order @relation(fields: [orderId], references: [id])
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 
@@ -219,6 +235,9 @@ model OrderItem{
   quantity    Int
   unitPrice   Float
 
+  OrderId Order?
+  variantId String @unique
+  variant ProductVariant @relation(fields: [variantId], references: [id])
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
