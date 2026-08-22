@@ -17,10 +17,11 @@ model User{
   firstName    String
   lastName     String
   email        String    @unique
-  password     String
-  phone        String
-  dateOfBirth  DateTime  @db.Date
-  gender       String
+  hash         String
+  salt         String
+  phone        String?    @unique
+  dateOfBirth  DateTime?  @db.Date
+  gender       String?
 
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
@@ -33,42 +34,61 @@ model User{
 
 }
 
-model Coupon{ 
-  id             String @id @default(cuid())
-  value          Float
-  code           String
-  expirationDate DateTime @db.Date
-  isActive Boolean @default(true)
+enum ShippingStatus {
+  PENDING
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
 
-  userId User[]
-  cartsId Cart[]
-  isActive       Boolean @default(true)
+enum PaymentStatus {
+  PENDING
+  APPROVED
+  REFUSED
+}
+
+enum OrderStatus {
+  PENDING_PAYMENT
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+model Coupon{ 
+  id               String @id @default(cuid())
+  value            Float
+  code             String
+  expirationDate   DateTime @db.Date
+  isActive         Boolean @default(true)
+
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  userId           String
+  user    User     @relation(fields: [userId], references: [id])
+
+  carts   Cart[]
+}
+
+model Product {
+  id             String @id @default(cuid())
+  name           String
+  description    String
+  price          Float
+  rating         Float?
+
+  variants       ProductVariant[]
+  wishlist       Wishlist[]
+  reviews        Review[]
 
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 
-  userId         String
-  user           User     @relation(fields: [userId], references: [id])
-
-  carts          Cart[]
-}
-
-model Product {
-  id          String @id @default(cuid())
-  name        String
-  description String
-  price       Float
-  rating      Float
-
-  variants    ProductVariant[]
-  wishlist    Wishlist[]
-  reviews     Review[]
-
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  categoryId  String
-  category    Category   @relation(fields: [categoryId], references: [id])
+  categoryId     String
+  category       Category   @relation(fields: [categoryId], references: [id])
 }
 
 model ProductVariant{
@@ -89,7 +109,7 @@ model ProductVariant{
 
 model Category{
   id         String @id @default(cuid())
-  name       String
+  name       String @unique
 
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
@@ -162,56 +182,51 @@ model Review{
 }
 
 model Order{
-  id           String @id @default(cuid())
-  status       Boolean
-  totalPrice   Float
-  address      String
-  placedOn     DateTime @default(now())
+  id                    String      @id @default(cuid())
+  status                OrderStatus @default(PENDING_PAYMENT)
+  totalPrice            Float
+  placedOn              DateTime    @default(now())
 
-  userId String
-  user User @relation(fields: [userId], references: [id])
-  paymentId Payment[]
-  shippingId String @unique
-  shipping Shipping @relation("shippingOrder", fields: [shippingId], references: [id])
-  orderItemId String @unique
-  orderItem OrderItem @relation(fields: [orderItemId], references: [id])
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  userId                String
+  user                  User        @relation(fields: [userId], references: [id])
 
-  userId       String
-  user         User @relation(fields: [userId], references: [id])
+  billingSameAsShipping Boolean @default(true)
+  billingFirstName      String?
+  billingLastName       String?
+  billingZipCode        String?
+  billingStreetAddress  String?
+  billingApartmentSuite String?
+  billingCity           String?
+  billingState          String?
 
-  payments     Payment[]
+  payments              Payment[]
+  shipping              Shipping?
+  orderItems            OrderItem[]
 
-  shipping     Shipping?
-
-  orderItems   OrderItem[]
-
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
 }
 
 model Payment{
-  id              String @id @default(cuid())
+  id              String    @id @default(cuid())
   method          String
-  lastFourDigits  String
+  lastFourDigits  String?
   ownerName       String
-  status          Boolean
   amount          Float
+  status          PaymentStatus @default(PENDING)
 
-  orderId String
-  order Order @relation(fields: [orderId], references: [id])
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
 
   orderId         String
   order           Order   @relation(fields: [orderId], references: [id])
-
 }
 
 model Shipping{
   id                  String @id @default(cuid())
   shippingMethod      String
   shippingCost        Float
-  trackingNumber      String
+  trackingNumber      String?
   recipientFirstName  String
   recipientLastName   String
   zipCode             String
@@ -225,22 +240,23 @@ model Shipping{
 
   orderId             String  @unique
   order               Order   @relation(fields: [orderId], references: [id])
+
+  shippingStatus      ShippingStatus @default(PENDING)
 }
 
-model OrderItem{
-  id          String @id @default(cuid())
-  quantity    Int
-  unitPrice   Float
+model OrderItem {
+  id        String         @id @default(cuid())
+  quantity  Int
+  unitPrice Float
 
-  OrderId Order?
-  variantId String @unique
-  variant ProductVariant @relation(fields: [variantId], references: [id])
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  orderId   String
+  order     Order          @relation(fields: [orderId], references: [id])
 
-  orderId     String
-  order       Order @relation(fields: [orderId], references: [id])
+  variantId String
+  variant   ProductVariant @relation(fields: [variantId], references: [id])
 
-  variantId   String
-  variant     ProductVariant @relation(fields: [variantId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([orderId, variantId])
 }
