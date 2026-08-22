@@ -1,12 +1,14 @@
 
 import { Router } from "express";
+
 import { UserController } from "../controllers/UserController";
 import { ProductController } from "../controllers/ProductController";
 import { VariantController } from "../controllers/VariantController";
+import { WishListController } from "../controllers/WishListController";
+import { OrderController } from "../controllers/OrderController";
+import { CategoryController } from "../controllers/CategoryController";
 
 import { authenticateJWT } from "../middlewares/Authenticate";
-import { WishListController } from "../controllers/WishListController";
-
 
 const router = Router();
 
@@ -38,5 +40,18 @@ router.post("/wishlist/:userId",authenticateJWT,  WishListController.create);
 router.get("/wishlist/:userId",authenticateJWT,  WishListController.get);
 router.delete("/wishlist/:userId/product/:productId", authenticateJWT, WishListController.deleteOne);
 router.delete("/wishlist/:userId",authenticateJWT, WishListController.deleteAll);
+
+//Order Routes
+router.post("/orders", authenticateJWT, OrderController.create);
+router.get("/orders/:id", authenticateJWT, OrderController.getById);
+router.patch("/orders/:id", authenticateJWT, OrderController.update);
+router.delete("/orders/:id", authenticateJWT, OrderController.delete);
+
+//Category Routes
+router.post("/categories", authenticateJWT, CategoryController.create);
+router.get("/categories", authenticateJWT, CategoryController.getAll);
+router.get("/categories/:id", authenticateJWT, CategoryController.getById);
+router.patch("/categories/:id", authenticateJWT, CategoryController.update);
+router.delete("/categories/:id", authenticateJWT, CategoryController.remove);
 
 export default router;
