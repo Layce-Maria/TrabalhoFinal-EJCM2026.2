@@ -1,5 +1,9 @@
 
 import { Router } from "express";
+import { validate } from "../middlewares/Validate";
+
+import { createUserSchema, loginSchema, updateUserSchema } from "../schemas/user.schema";
+
 
 import { UserController } from "../controllers/UserController";
 import { ProductController } from "../controllers/ProductController";
@@ -12,11 +16,15 @@ import { authenticateJWT } from "../middlewares/Authenticate";
 
 const router = Router();
 
+//user.schema routes
+router.post("/users", validate(createUserSchema), UserController.create);
+router.post("/login", validate(loginSchema), UserController.login);
+router.patch("/user/:id", authenticateJWT, validate(updateUserSchema), UserController.update);
+
 //User Routes
 router.post("/users", UserController.create);
 router.post("/login", UserController.login);
 
-router.post("/users", authenticateJWT, UserController.create);
 router.get("/users/:id", authenticateJWT, UserController.getById);
 router.patch("/users/:id", authenticateJWT, UserController.update);
 router.delete("/users/:id", authenticateJWT, UserController.delete);
