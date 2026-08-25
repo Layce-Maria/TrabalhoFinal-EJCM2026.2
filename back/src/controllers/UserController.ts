@@ -12,20 +12,20 @@ export class UserController {
             }
 
             const { hash, salt } = auth.generatePassword(password);
-            const passwordStored = `${hash}:${salt}`;
             const newUser = await prisma.user.create({
                 data: {
                     firstName,
                     lastName,
                     email,
-                    password: passwordStored,
+                    hash,
+                    salt,
                     phone,
-                    dateOfBirth: new Date(dateOfBirth),
-                    gender
+                    gender,
+                    ...dateOfBirth && { dateOfBirth: new Date(dateOfBirth) },
                 }
             });
 
-            const { password: _, ...userWithoutPassword } = newUser;
+            const { hash: _hash, salt: _salt, ...userWithoutPassword } = newUser;
             return res.status(201).json(userWithoutPassword);
         }catch(error) {
             console.error(error);
@@ -46,17 +46,14 @@ export class UserController {
             if(!user) {
                 return res.status(401).json({ error: "Credenciais inválidas"});
             }
-            const [hash, salt] = user.password.split(':');
-            if (!hash || !salt) {
-                return res.status(500).json({ error: "Erro ao validar credenciais"});
-            }
-            const isValid = auth.checkPassword(password, hash, salt);
+
+            const isValid = auth.checkPassword(password, user.hash, user.salt);
             if(!isValid) {
                 return res.status(401).json({error: "Credenciais inválidas"});
             }
-            
+
             const token = auth.generateJWT(user.id as unknown as number);
-            const { password: _, ...userWithoutPassword } = user;
+            const { hash: _hash, salt: _salt, ...userWithoutPassword } = user;
 
             return res.status(200).json({ user: userWithoutPassword, token});
         } catch (error) {
@@ -67,14 +64,14 @@ export class UserController {
 
     static async getById(req: Request, res: Response) {
         try {
-            const { id } = req.params;
+            const id = req.params.id as string;
             const user = await prisma.user.findUnique({
                 where: { id },
             });
             if (!user) {
                 return res.status(404).json({ error: "Usuário não encontrado" });
             }
-            const { password: _, ...userWithoutPassword } = user;
+            const { hash: _hash, salt: _salt, ...userWithoutPassword } = user;
             return res.json(userWithoutPassword);
         } catch (error) {
             console.error(error);
@@ -83,7 +80,7 @@ export class UserController {
     }
     static async update(req: Request, res: Response) {
         try {
-            const { id } = req.params;
+            const id = req.params.id as string;
             const { firstName, lastName, email, phone, dateOfBirth, gender } = req.body;
 
             const updateUser = await prisma.user.update({
@@ -97,7 +94,7 @@ export class UserController {
                     ...dateOfBirth && { dateOfBirth: new Date(dateOfBirth)}
                 }
             });
-            const { password: _, ...userWithoutPassword } = updateUser;
+            const { hash: _hash, salt: _salt, ...userWithoutPassword } = updateUser;
             return res.json(userWithoutPassword);
         } catch (error) {
             console.error(error);
@@ -106,7 +103,7 @@ export class UserController {
     }
     static async delete(req: Request, res: Response) {
         try {
-            const { id } = req.params;
+            const id = req.params.id as string;
             await prisma.user.delete({
                 where: { id }
             });
