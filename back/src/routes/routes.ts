@@ -4,6 +4,7 @@ import { validate } from "../middlewares/Validate";
 import { createUserSchema, loginSchema, updateUserSchema } from "../schemas/user.schema";
 import { createProductSchema, updateProductSchema } from "../schemas/product.schema";
 import { createCategorySchema, updateCategorySchema } from "../schemas/category.schema";
+import { createVariantSchema, updateVariantSchema, updateStockSchema } from "../schemas/variant.schema";
 
 import { UserController } from "../controllers/UserController";
 import { ProductController } from "../controllers/ProductController";
@@ -29,12 +30,13 @@ router.get("/products/:id", authenticateJWT, ProductController.getById);
 router.patch("/products/:id", authenticateJWT, validate(updateProductSchema), ProductController.update);
 router.delete("/products/:id", authenticateJWT, ProductController.delete);
 
+
 // Product Variant Routes
-router.post("/productVariant", authenticateJWT, VariantController.create);
+router.post("/productVariant", authenticateJWT, validate(createVariantSchema), VariantController.create);
 router.get("/productVariant/:id", authenticateJWT, VariantController.getById);
-router.get("/productVariant/:productId", authenticateJWT, VariantController.getVariantByProduct);
-router.patch("/productVariant/:id", authenticateJWT, VariantController.update);
-router.patch("/productVariant/:id/stockQuantity", authenticateJWT, VariantController.updateStock);
+router.get("/productVariant/product/:productId", authenticateJWT, VariantController.getVariantByProduct);
+router.patch("/productVariant/:id", authenticateJWT, validate(updateVariantSchema), VariantController.update);
+router.patch("/productVariant/:id/stockQuantity", authenticateJWT, validate(updateStockSchema), VariantController.updateStock);
 router.delete("/productVariant/:id", authenticateJWT, VariantController.delete);
 
 // Wishlist Routes
