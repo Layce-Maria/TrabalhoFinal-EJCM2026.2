@@ -4,14 +4,15 @@ import { prisma } from '../config/prisma';
 export class ProductController {
     static async create(req: Request, res: Response) {
         try {
-            const { name, description, price, rating } = req.body;
+            const { name, description, price, rating, categoryId } = req.body;
 
             const newProduct = await prisma.product.create({
                 data: {
                     name,
                     description,
                     price,
-                    rating
+                    rating,
+                    categoryId
                 }
             });
 

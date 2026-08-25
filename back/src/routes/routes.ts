@@ -3,7 +3,7 @@ import { Router } from "express";
 import { validate } from "../middlewares/Validate";
 
 import { createUserSchema, loginSchema, updateUserSchema } from "../schemas/user.schema";
-
+import { createProductSchema, updateProductSchema } from "../schemas/product.schema";
 
 import { UserController } from "../controllers/UserController";
 import { ProductController } from "../controllers/ProductController";
@@ -20,6 +20,10 @@ const router = Router();
 router.post("/users", validate(createUserSchema), UserController.create);
 router.post("/login", validate(loginSchema), UserController.login);
 router.patch("/user/:id", authenticateJWT, validate(updateUserSchema), UserController.update);
+
+//product.schema routes
+router.post("/products", authenticateJWT, validate(createProductSchema), ProductController.create);
+router.patch("/products/:id", authenticateJWT, validate(updateProductSchema), ProductController.update);
 
 //User Routes
 router.post("/users", UserController.create);
