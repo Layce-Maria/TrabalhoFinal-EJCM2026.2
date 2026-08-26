@@ -1,7 +1,7 @@
 import { AuthProvider } from './contexts/AuthContext'
 import { TopBanner } from './components/TopBanner'
 import { Header } from './components/Header'
-import { Home } from './pages/home'
+import { Login } from './pages/login'
 import './App.css'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <div className="page-container">
         <TopBanner />
         <Header />
-        <Home />
+        <Login />
       </div>
     </AuthProvider>
   )

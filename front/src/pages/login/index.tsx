@@ -1,9 +1,9 @@
 import { useState, useContext } from 'react'
 import { AuthContext } from '../../contexts/AuthContext'
 import { SocialButtons } from '../../components/SocialButtons'
-import './home.css'
+import './login.css'
 
-export function Home() {
+export function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
