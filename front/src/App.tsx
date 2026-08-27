@@ -4,6 +4,7 @@ import { TopBanner } from './components/TopBanner'
 import { Header } from './components/Header'
 import { Login } from './pages/login'
 import { Home } from './pages/home'
+import { Wishlist } from './pages/wishlist/wishlist'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
+          <Route path="/wishlist" element={<Wishlist />} />
         </Routes>
       </div>
     </AuthProvider>
