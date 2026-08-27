@@ -130,6 +130,10 @@ npm run dev
 
 O Vite irá disponibilizar a aplicação no endereço informado no terminal.
 
+## Testes
+
+As collections do Postman utilizadas para testar a API estão disponíveis no Google Drive.
+📁 [Acessar Collections](https://drive.google.com/drive/folders/1I1ezGGb5zVgUnOI-b1D-rNaBwJ11lBa5?usp=sharing)
 
 ## 👥 Autores
 
