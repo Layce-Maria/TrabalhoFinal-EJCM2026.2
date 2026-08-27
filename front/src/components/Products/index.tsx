@@ -3,6 +3,7 @@ import jacketImg from "../../assets/vintageJacket.jpeg"
 import blazerImg from "../../assets/blazer.jpeg"
 import jeansImg from "../../assets/jeans.jpeg"
 import blouseImg from "../../assets/silkBlouse.jpeg"
+import { ArrowRight } from 'lucide-react'
 
 const products = [
     {
@@ -83,6 +84,7 @@ export function Products() {
                     </div>
                 ))}
             </div>
+            <button className="view-products">View All Products <ArrowRight size={18} /></button>
         </section>
     )
 }

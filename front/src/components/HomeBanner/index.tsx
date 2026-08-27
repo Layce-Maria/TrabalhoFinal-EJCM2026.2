@@ -1,4 +1,5 @@
 import './HomeBanner.css' 
+import { ArrowRight } from 'lucide-react'
 
 export function HomeBanner() {
     return(
@@ -10,7 +11,7 @@ sustainable materials, timeless designs.</p>
 
             <div className = "banner-buttons">
                 <a className = "shopNow" href="https://link-do-postman.com" target="_blank" rel="noopener noreferrer">
-                Shop Now
+                Shop Now <ArrowRight size={18} />
                 </a>
 
                 <a className = "viewCollection" href="https://link-do-postman.com" target="_blank" rel="noopener noreferrer">
