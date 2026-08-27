@@ -11,10 +11,10 @@ export function Header() {
           </svg>
         </button>
 
-        <div className="brand-logo">
+        <Link to="/" className="brand-logo">
           <span className="logo-badge">S</span>
           <span className="logo-text">STYLE</span>
-        </div>
+        </Link>
 
         <nav className="desktop-nav">
           <a href="#">New In</a>
