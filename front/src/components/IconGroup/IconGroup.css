@@ -1,0 +1,48 @@
+.iconGroup {
+    display: flex;
+    justify-content: center;
+    gap: 11rem;
+    align-items: center;
+    margin: 5rem;
+    flex-direction: row;
+}
+
+.icon-circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: rgba(229, 231, 235, 1); /* cinza claro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.returns,
+.shipping,
+.payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:1rem;
+}
+
+.shipping h3,
+.returns h3,
+.payment h3 {
+    margin: 0.5rem 0 0.25rem;
+}
+
+.shipping p,
+.returns p,
+.payment p {
+    margin: 0;
+    color: rgba(107, 114, 128, 1);
+}
+
+@media (max-width: 600px) {
+    .iconGroup {
+    flex-direction: column;
+    gap: 2rem;
+    }
+}
