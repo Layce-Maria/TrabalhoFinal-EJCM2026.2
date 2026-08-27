@@ -1,0 +1,86 @@
+.number{
+    font-size: 24px;
+    font-weight: 700;
+    color: #030711;
+    margin: 0px;
+}
+.in_Form{
+    display: flex;
+    flex-direction: row-;
+    justify-content: space-between;
+    gap: 2dvh;
+    
+}
+.divForms{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap:1dvh;
+    
+}
+.labelInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 1dvh;
+}
+input{
+    display: flex;
+    
+    font-size: 14px;
+    font-weight: 600;
+    color: #030711;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    padding: 2dvh 1dvh ;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2dvh;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    padding: 3dvh;
+
+    
+}
+.ButtonSave{
+    background-color: #030711;
+    border-radius: 10px;
+    width: 120;
+height: 40;
+border-radius: 10px;
+angle: 0 deg;
+opacity: 1;
+padding-top: 9.5px;
+padding-right: 16px;
+padding-bottom: 10.5px;
+padding-left: 16px;
+color: white;
+
+border: 0px;
+}
+.ButtonCancel{
+    width: 76;
+height: 40;
+border-radius: 10px;
+border-width: 1px;
+angle: 0 deg;
+opacity: 1;
+padding-top: 9.5px;
+padding-right: 17px;
+padding-bottom: 10.5px;
+padding-left: 17px;
+border: 1px solid #E5E7EB;
+background-color: #FFFFFF;
+
+}
+.divButtom{
+    display: flex;
+    
+    gap:10px;
+}

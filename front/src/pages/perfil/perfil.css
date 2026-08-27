@@ -1,5 +1,34 @@
 .shape{
     display: flex;
-
-    background-color: black;
+    flex-direction: column;
+    align-items: center;
+   
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.left{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: 80dvh;
+    margin-bottom: 1dvh;
+}
+
+
+
+
+.squer{
+    display: flex;
+    flex-direction: column;
+    gap:4dvh;
+}
+
+
+
+
+
+
+
+
+
+
