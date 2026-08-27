@@ -9,11 +9,25 @@ import { createVariantSchema, updateVariantSchema, updateStockSchema } from "../
 import { UserController } from "../controllers/UserController";
 import { ProductController } from "../controllers/ProductController";
 import { VariantController } from "../controllers/VariantController";
-import { WishListController } from "../controllers/WishListController";
+
 import { OrderController } from "../controllers/OrderController";
 import { CategoryController } from "../controllers/CategoryController";
 
 import { authenticateJWT } from "../middlewares/Authenticate";
+import { WishListController } from "../controllers/WishListController";
+import { CartController } from "../controllers/CartController";
+
+
+import { CartItemController } from "../controllers/CartItemController";
+
+
+
+
+
+
+
+//User Routes
+
 
 const router = Router();
 
@@ -57,5 +71,21 @@ router.get("/categories", authenticateJWT, CategoryController.getAll);
 router.get("/categories/:id", authenticateJWT, CategoryController.getById);
 router.patch("/categories/:id", authenticateJWT, validate(updateCategorySchema), CategoryController.update);
 router.delete("/categories/:id", authenticateJWT, CategoryController.remove);
+
+// Cart Routes
+router.post("/cart",authenticateJWT, CartController.create);
+router.get("/cart/:id",authenticateJWT, CartController.getbyId);
+router.patch("/cart/:id",authenticateJWT, CartController.updatecart);
+router.delete('/cart/:cartId/item/:itemId',authenticateJWT,CartController.removeItem);
+router.post("/category",authenticateJWT, CategoryController.create);
+
+// CartItem Routes
+router.post("/cartitem",authenticateJWT, CartItemController.create);
+router.get("/cartitem/:id",authenticateJWT,  CartItemController.get);
+router.patch("/cartitem/:id",authenticateJWT,  CartItemController.update);
+router.delete('/cartItem/cart/:userId/item/:variantId',authenticateJWT, CartItemController.delete);
+
+//Coupon Routes
+
 
 export default router;
