@@ -39,3 +39,10 @@
     margin: 0;
     color: rgba(107, 114, 128, 1);
 }
+
+@media (max-width: 600px) {
+    .iconGroup {
+    flex-direction: column;
+    gap: 2rem;
+    }
+}

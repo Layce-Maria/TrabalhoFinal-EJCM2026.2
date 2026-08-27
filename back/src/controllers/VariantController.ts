@@ -9,7 +9,7 @@ export class VariantController {
         try{
             const {size, color, stockQuantity, productId} = req.body;
 
-            const newVariant = await prisma.ProductVariant.create({
+            const newVariant = await prisma.productVariant.create({
                 data: {
                     size,
                     color,
@@ -29,7 +29,7 @@ export class VariantController {
         try{
             const {id} = req.params;
 
-            const variant = await prisma.ProductVariant.findUnique({
+            const variant = await prisma.productVariant.findUnique({
                 where: {id}
             });
 
@@ -49,7 +49,7 @@ export class VariantController {
         try{
             const {productId} = req.params;
 
-            const productVariants = await prisma.ProductVariant.findMany({
+            const productVariants = await prisma.productVariant.findMany({
                 where: {productId}
             });
 
@@ -70,7 +70,7 @@ export class VariantController {
             const {id} = req.params;
             const {size, color, stockQuantity} = req.body;
 
-            const updatedVariant = await prisma.ProductVariant.update({
+            const updatedVariant = await prisma.productVariant.update({
                 where: {
                     id: id,
                 },
@@ -101,7 +101,7 @@ export class VariantController {
                 return res.status(400).json({ error: "quantityToAdd deve ser um número" });
             }
 
-            const updatedStock = await prisma.ProductVariant.update({
+            const updatedStock = await prisma.productVariant.update({
                 where: {
                     id: id
                 },
@@ -124,7 +124,7 @@ export class VariantController {
         try{
             const {id} = req.params;
 
-            const deletedVariant=await prisma.ProductVariant.delete({
+            const deletedVariant=await prisma.productVariant.delete({
                 where: {id}
             });
             return res.status(200).json(deletedVariant);

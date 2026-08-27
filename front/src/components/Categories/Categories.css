@@ -79,3 +79,15 @@ h3 {
     justify-content: flex-start;
     z-index: 1;
 }
+
+@media (max-width: 1024px) {
+    .category-list {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .category-list {
+    grid-template-columns: 1fr;
+    }
+}
