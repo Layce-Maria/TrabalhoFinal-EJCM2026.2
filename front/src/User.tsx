@@ -5,17 +5,17 @@ import { Login } from './pages/login'
 import { Perfil } from './pages/perfil'
 import './App.css'
 
-function App() {
+function User() {
   return (
     <AuthProvider>
       <div className="page-container">
-        <TopBanner />
+        
         <Header />
-        <Login />
+        <Perfil/>
         
       </div>
     </AuthProvider>
   )
 }
 
-export default App
+export default User
