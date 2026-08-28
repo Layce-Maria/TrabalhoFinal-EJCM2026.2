@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import { SocialButtons } from '../../components/SocialButtons'
 import './login.css'
@@ -97,7 +97,7 @@ export function Login() {
         </form>
 
         <p className="signup-prompt">
-          Don't have an account? <a href="#">Sign up</a>
+          Don't have an account? <Link to="/signup">Sign up</Link>
         </p>
       </div>
 
