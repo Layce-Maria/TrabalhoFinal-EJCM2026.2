@@ -8,6 +8,16 @@
   margin: 0 0 4px 0;
 }
 
+.signup-success {
+  background-color: #eafaf0;
+  color: #1a7f4b;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin: 0 0 4px 0;
+}
+
 .signup-page {
   display: flex;
   flex-direction: column;
