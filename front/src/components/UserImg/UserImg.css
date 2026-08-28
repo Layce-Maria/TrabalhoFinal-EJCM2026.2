@@ -1,0 +1,41 @@
+.infoUser{
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    
+    gap: 20px;
+
+}
+
+.sigla{
+    background-color: #F3F4F6;
+    border-radius: 100%;
+    padding: 3dvh;
+
+}
+.Name{
+    font-weight: 700;
+    font-size: 30px;
+    color: #030711;
+    margin-bottom: 0px;
+}
+.email{
+    font-size: 16px;
+    font-weight: 400;
+    color: #6B7280;
+    margin: 0px;
+}
+.ordeAndDate{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+.P1{
+    background-color: #F3F4F6;
+    border-radius: 999px;
+    color: #030711;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1dvh 2dvh;
+    margin-top: 1dvh;
+}
