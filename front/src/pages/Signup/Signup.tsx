@@ -14,6 +14,7 @@ export default function Signup() {
     subscribeNewsletter: true,
   });
   const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,6 +28,7 @@ export default function Signup() {
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     setError(null);
+    setSuccess(false);
 
     if (formData.password !== formData.confirmPassword) {
       setError('As senhas não são compatíveis.');
@@ -41,6 +43,7 @@ export default function Signup() {
         email: formData.email,
         password: formData.password,
       });
+      setSuccess(true);
     } catch {
       setError('Não foi possível criar a conta.');
     } finally {
@@ -102,6 +105,7 @@ export default function Signup() {
         {/* Formulário */}
         <form onSubmit={handleSubmit} className="signup-form">
           {error && <p className="signup-error">{error}</p>}
+          {success && <p className="signup-success">Usuário criado com sucesso!</p>}
 
           <div className="form-row">
             <div className="form-group">
