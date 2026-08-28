@@ -116,6 +116,15 @@
   height: 15px;
 }
 
+.wishlist-btn-active {
+  color: #e0233f;
+}
+
+.wishlist-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .gallery-nav {
   position: absolute;
   top: 50%;
