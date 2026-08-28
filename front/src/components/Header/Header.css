@@ -6,6 +6,34 @@
   border-bottom: 1px solid #eaeaea;
   padding: 12px 32px;
   gap: 20px;
+  position: relative;
+}
+
+.login-warning-toast {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e0233f;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: login-warning-fade-in 0.2s ease-out;
+}
+
+@keyframes login-warning-fade-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 .header-left {
