@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { api } from '../../services/api';
 import './Signup.css';
 
 export default function Signup() {
@@ -12,6 +13,8 @@ export default function Signup() {
     agreeTerms: false,
     subscribeNewsletter: true,
   });
+  const [error, setError] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -21,9 +24,28 @@ export default function Signup() {
     }));
   };
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.log('Dados do cadastro:', formData);
+    setError(null);
+
+    if (formData.password !== formData.confirmPassword) {
+      setError('As senhas não são compatíveis.');
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      await api.post('/users', {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        password: formData.password,
+      });
+    } catch {
+      setError('Não foi possível criar a conta.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -79,6 +101,8 @@ export default function Signup() {
 
         {/* Formulário */}
         <form onSubmit={handleSubmit} className="signup-form">
+          {error && <p className="signup-error">{error}</p>}
+
           <div className="form-row">
             <div className="form-group">
               <label>First name</label>
@@ -204,8 +228,8 @@ export default function Signup() {
             </label>
           </div>
 
-          <button type="submit" className="btn-submit">
-            Create Account
+          <button type="submit" className="btn-submit" disabled={submitting}>
+            {submitting ? 'Creating account...' : 'Create Account'}
           </button>
         </form>
 
