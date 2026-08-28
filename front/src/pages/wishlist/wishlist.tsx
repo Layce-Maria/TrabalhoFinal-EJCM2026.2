@@ -1,73 +1,22 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './wishlist.css'
-import calcajeans1 from '../../assets/products/calcajeans1.jpg'
-import sweater from '../../assets/products/sweater.jpg'
-import tenis from '../../assets/products/tenis.jpg'
-import hoodie from '../../assets/products/hoodie.jpg'
-import jeans from '../../assets/products/jeans.jpg'
+import { api } from '../../services/api'
+import { AuthContext } from '../../contexts/AuthContext'
 import premium from '../../assets/products/premium.jpg'
 import boots from '../../assets/products/boots.jpg'
+import jeans from '../../assets/products/jeans.jpg'
+import hoodie from '../../assets/products/hoodie.jpg'
 
-type WishlistItem = {
-  id: string
-  brand: string
-  name: string
-  rating: number
-  reviewsCount: number
-  price: number
-  originalPrice: number
-  discountPercent: number
-  addedDate: string
-  tag: string
-  outOfStock: boolean
-  image?: string
-  imagePosition?: string
+type WishlistApiItem = {
+  userId: string
+  productId: string
+  createdAt: string
+  product: {
+    name: string
+    price: number
+    rating: number | null
+  }
 }
-
-const initialWishlistItems: WishlistItem[] = [
-  {
-    id: 'w1',
-    brand: 'STYLE Premium',
-    name: 'Comfort Slim Jeans',
-    rating: 4.8,
-    reviewsCount: 124,
-    price: 29,
-    originalPrice: 49,
-    discountPercent: 41,
-    addedDate: '14/01/2024',
-    tag: 'Limited Time',
-    outOfStock: false,
-    image: calcajeans1,
-  },
-  {
-    id: 'w2',
-    brand: 'STYLE Luxury',
-    name: 'Cashmere Sweater',
-    rating: 4.8,
-    reviewsCount: 156,
-    price: 120,
-    originalPrice: 200,
-    discountPercent: 40,
-    addedDate: '09/01/2024',
-    tag: 'Luxury Sale',
-    outOfStock: false,
-    image: sweater,
-  },
-  {
-    id: 'w3',
-    brand: 'STYLE Sport',
-    name: 'Athletic Sneakers',
-    rating: 4.5,
-    reviewsCount: 234,
-    price: 84,
-    originalPrice: 140,
-    discountPercent: 40,
-    addedDate: '04/01/2024',
-    tag: 'Sport Sale',
-    outOfStock: true,
-    image: tenis,
-  },
-]
 
 type RecommendedItem = {
   id: string
@@ -99,35 +48,106 @@ function ProductImage({ image, alt, className }: { image?: string; alt: string; 
   )
 }
 
-function StarRating({ rating, reviewsCount }: { rating: number; reviewsCount?: number }) {
+function StarRating({ rating }: { rating: number }) {
   return (
     <span className="rating">
       <svg viewBox="0 0 24 24" className="star star-filled">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
       </svg>
       {rating}
-      {reviewsCount !== undefined && <span className="reviews-count">({reviewsCount})</span>}
     </span>
   )
 }
 
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString('pt-BR')
+}
+
 export function Wishlist() {
-  const [items, setItems] = useState<WishlistItem[]>(initialWishlistItems)
+  const { user } = useContext(AuthContext)
+  const [items, setItems] = useState<WishlistApiItem[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
-  const removeItem = (id: string) => {
-    setItems((current) => current.filter((item) => item.id !== id))
+  useEffect(() => {
+    if (!user) {
+      setLoading(false)
+      return
+    }
+
+    let active = true
+    setLoading(true)
+    setError(null)
+
+    api
+      .get<WishlistApiItem[]>(`/wishlist/${user.id}`)
+      .then((response) => {
+        if (active) setItems(response.data)
+      })
+      .catch(() => {
+        if (active) setError('Não foi possível carregar sua wishlist.')
+      })
+      .finally(() => {
+        if (active) setLoading(false)
+      })
+
+    return () => {
+      active = false
+    }
+  }, [user])
+
+  const removeItem = async (productId: string) => {
+    if (!user) return
+    const previousItems = items
+    setItems((current) => current.filter((item) => item.productId !== productId))
+    try {
+      await api.delete(`/wishlist/${user.id}/product/${productId}`)
+    } catch {
+      setItems(previousItems)
+    }
   }
 
-  const clearWishlist = () => {
+  const clearWishlist = async () => {
+    if (!user) return
+    const previousItems = items
     setItems([])
+    try {
+      await api.delete(`/wishlist/${user.id}`)
+    } catch {
+      setItems(previousItems)
+    }
   }
 
-  const addToCart = (id: string) => {
-    console.log('Add to cart:', id)
+  const addToCart = (productId: string) => {
+    console.log('Add to cart:', productId)
   }
 
   const addAllToCart = () => {
-    items.filter((item) => !item.outOfStock).forEach((item) => addToCart(item.id))
+    items.forEach((item) => addToCart(item.productId))
+  }
+
+  if (!user) {
+    return (
+      <main className="wishlist-page">
+        <p className="wishlist-empty">Faça login para ver sua wishlist.</p>
+      </main>
+    )
+  }
+
+  if (loading) {
+    return (
+      <main className="wishlist-page">
+        <p className="wishlist-empty">Carregando sua wishlist...</p>
+      </main>
+    )
+  }
+
+  if (error) {
+    return (
+      <main className="wishlist-page">
+        <p className="wishlist-empty">{error}</p>
+      </main>
+    )
   }
 
   return (
@@ -183,60 +203,48 @@ export function Wishlist() {
       ) : (
         <div className="wishlist-grid">
           {items.map((item) => (
-            <article className="wishlist-card" key={item.id}>
+            <article className="wishlist-card" key={item.productId}>
               <div className="wishlist-card-image">
-                <div className="wishlist-card-badges">
-                  <span className="discount-badge">-{item.discountPercent}%</span>
-                  <span className="category-tag">{item.tag}</span>
-                  {item.outOfStock && <span className="out-of-stock-tag">Out of Stock</span>}
-                </div>
                 <button
                   className="heart-btn heart-btn-active"
                   aria-label="Remover da wishlist"
-                  onClick={() => removeItem(item.id)}
+                  onClick={() => removeItem(item.productId)}
                 >
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                   </svg>
                 </button>
-                <ProductImage image={item.image} alt={item.name} className="wishlist-card-photo" />
+                <ProductImage alt={item.product.name} className="wishlist-card-photo" />
               </div>
 
               <div className="wishlist-card-info">
                 <div className="wishlist-card-top-row">
-                  <span className="wishlist-brand">{item.brand}</span>
-                  <StarRating rating={item.rating} reviewsCount={item.reviewsCount} />
+                  <StarRating rating={item.product.rating ?? 0} />
                 </div>
 
-                <p className="wishlist-name">{item.name}</p>
+                <p className="wishlist-name">{item.product.name}</p>
 
                 <div className="wishlist-price-row">
-                  <span className="price-current">${item.price}</span>
-                  <span className="price-original">${item.originalPrice}</span>
+                  <span className="price-current">${item.product.price}</span>
                 </div>
 
-                <p className="wishlist-added">Added {item.addedDate}</p>
+                <p className="wishlist-added">Added {formatDate(item.createdAt)}</p>
 
                 <div className="wishlist-card-actions">
-                  {item.outOfStock ? (
-                    <button className="btn-notify" type="button" disabled>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
-                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-                      </svg>
-                      Notify Me
-                    </button>
-                  ) : (
-                    <button className="btn-add-to-cart-sm" type="button" onClick={() => addToCart(item.id)}>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-                        <line x1="3" y1="6" x2="21" y2="6" />
-                        <path d="M16 10a4 4 0 0 1-8 0" />
-                      </svg>
-                      Add to Cart
-                    </button>
-                  )}
-                  <button className="icon-btn-outline" aria-label="Remover" type="button" onClick={() => removeItem(item.id)}>
+                  <button className="btn-add-to-cart-sm" type="button" onClick={() => addToCart(item.productId)}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                      <line x1="3" y1="6" x2="21" y2="6" />
+                      <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    Add to Cart
+                  </button>
+                  <button
+                    className="icon-btn-outline"
+                    aria-label="Remover"
+                    type="button"
+                    onClick={() => removeItem(item.productId)}
+                  >
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <polyline points="3,6 5,6 21,6" />
                       <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
@@ -260,7 +268,7 @@ export function Wishlist() {
                 <StarRating rating={item.rating} />
                 <div className="recommended-bottom-row">
                   <span className="price-current">${item.price}</span>
-                  <button className="btn-add-to-cart-sm" type="button" onClick={() => addToCart(item.id)}>
+                  <button className="btn-add-to-cart-sm" type="button">
                     Add to Cart
                   </button>
                 </div>
