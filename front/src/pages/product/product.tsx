@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import './product.css'
 import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './product.css'
@@ -13,15 +11,6 @@ import sweater from '../../assets/products/sweater.jpg'
 import tenis from '../../assets/products/tenis.jpg'
 import vestido from '../../assets/products/vestido.jpg'
 
-
-const product = {
-  breadcrumb: ['Home', 'Sale'],
-  name: 'Comfort Slim Jeans',
-  brand: 'STYLE Premium',
-  tags: ['Tops', 'Sale'],
-  rating: 4.7,
-  reviewsCount: 203,
-  price: 79,
 type ApiProduct = {
   id: string
   name: string
@@ -50,8 +39,6 @@ const productDisplay = {
   ],
   sizes: ['XS', 'S', 'M', 'L', 'XL'],
   maxQuantity: 12,
-  description:
-    'Make your move with our Comfort Jeans Collection. These premium fitted, ultra-soft jeans are designed for the ultimate feel-good experience. Featuring a super soft, stretchy slim-fit, our jeans offer the perfect combination of style and comfort.',
   keyFeatures: [
     'Premium fitted, ultra-soft jeans with signature four-way stretch.',
     'Classic stitch with 5 pockets.',
@@ -80,7 +67,6 @@ const relatedProducts: RelatedProduct[] = [
 type Tab = 'description' | 'specifications' | 'reviews'
 
 export function Product() {
-  const [selectedColor, setSelectedColor] = useState(product.colors[0].name)
   const { id } = useParams<{ id: string }>()
   const { user } = useContext(AuthContext)
 
@@ -95,12 +81,6 @@ export function Product() {
   const [activeImage, setActiveImage] = useState(0)
   const [activeTab, setActiveTab] = useState<Tab>('description')
 
-  const decreaseQuantity = () => setQuantity((q) => Math.max(1, q - 1))
-  const increaseQuantity = () => setQuantity((q) => Math.min(product.maxQuantity, q + 1))
-
-  const showPrevImage = () =>
-    setActiveImage((i) => (i - 1 + product.images.length) % product.images.length)
-  const showNextImage = () => setActiveImage((i) => (i + 1) % product.images.length)
   useEffect(() => {
     if (!id) return
     let active = true
@@ -187,7 +167,6 @@ export function Product() {
   return (
     <main className="product-page">
       <nav className="breadcrumb" aria-label="Breadcrumb">
-        {product.breadcrumb.map((crumb) => (
         {productDisplay.breadcrumb.map((crumb) => (
           <span key={crumb}>
             <a href="#">{crumb}</a>
@@ -200,9 +179,6 @@ export function Product() {
       <div className="product-main">
         <section className="product-gallery">
           <div className="gallery-main">
-            <span className="discount-badge">-{product.discountPercent}%</span>
-            <button className="wishlist-btn" aria-label="Add to wishlist">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <span className="discount-badge">-{productDisplay.discountPercent}%</span>
             <button
               className={`wishlist-btn${isWishlisted ? ' wishlist-btn-active' : ''}`}
@@ -229,14 +205,12 @@ export function Product() {
 
             <img
               className="gallery-main-image"
-              src={product.images[activeImage]}
               src={productDisplay.images[activeImage]}
               alt={product.name}
             />
           </div>
 
           <div className="gallery-thumbs">
-            {product.images.map((image, index) => (
             {productDisplay.images.map((image, index) => (
               <button
                 key={index}
@@ -252,14 +226,12 @@ export function Product() {
 
         <section className="product-info">
           <div className="product-tags">
-            {product.tags.map((tag) => (
             {productDisplay.tags.map((tag) => (
               <span key={tag} className="tag-pill">{tag}</span>
             ))}
           </div>
 
           <h1 className="product-name">{product.name}</h1>
-          <p className="product-brand">{product.brand}</p>
           <p className="product-brand">{productDisplay.brand}</p>
 
           <div className="product-rating">
@@ -268,28 +240,23 @@ export function Product() {
                 <svg
                   key={index}
                   viewBox="0 0 24 24"
-                  className={index < Math.round(product.rating) ? 'star star-filled' : 'star'}
                   className={index < Math.round(product.rating ?? 0) ? 'star star-filled' : 'star'}
                 >
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               ))}
             </span>
-            <span className="rating-value">{product.rating}</span>
-            <span className="rating-count">({product.reviewsCount} reviews)</span>
             <span className="rating-value">{product.rating ?? 0}</span>
           </div>
 
           <div className="product-price-row">
             <span className="price-current">${product.price}</span>
-            <span className="price-original">${product.originalPrice}</span>
             <span className="price-original">${productDisplay.originalPrice}</span>
             <span className="low-stock-badge">Low Stock</span>
           </div>
 
           <p className="stock-status">
             <span className="stock-dot" />
-            In Stock ({product.stockLeft} left)
             In Stock ({productDisplay.stockLeft} left)
           </p>
 
@@ -298,7 +265,6 @@ export function Product() {
           <div className="option-group">
             <span className="option-label">Color</span>
             <div className="color-options">
-              {product.colors.map((color) => (
               {productDisplay.colors.map((color) => (
                 <button
                   key={color.name}
@@ -318,7 +284,6 @@ export function Product() {
               <a href="#" className="size-guide-link">Size Guide</a>
             </div>
             <div className="size-options">
-              {product.sizes.map((size) => (
               {productDisplay.sizes.map((size) => (
                 <button
                   key={size}
@@ -349,13 +314,11 @@ export function Product() {
                   type="button"
                   aria-label="Increase quantity"
                   onClick={increaseQuantity}
-                  disabled={quantity >= product.maxQuantity}
                   disabled={quantity >= productDisplay.maxQuantity}
                 >
                   +
                 </button>
               </div>
-              <span className="max-items-note">Max {product.maxQuantity} items</span>
               <span className="max-items-note">Max {productDisplay.maxQuantity} items</span>
             </div>
           </div>
@@ -436,7 +399,6 @@ export function Product() {
             className={`tab-btn${activeTab === 'reviews' ? ' tab-btn-active' : ''}`}
             onClick={() => setActiveTab('reviews')}
           >
-            Reviews ({product.reviewsCount})
             Reviews
           </button>
         </div>
@@ -447,7 +409,6 @@ export function Product() {
               <p>{product.description}</p>
               <p className="key-features-title">Key Features</p>
               <ul className="key-features-list">
-                {product.keyFeatures.map((feature) => (
                 {productDisplay.keyFeatures.map((feature) => (
                   <li key={feature}>{feature}</li>
                 ))}
@@ -491,5 +452,4 @@ export function Product() {
       </section>
     </main>
   )
-}
 }
