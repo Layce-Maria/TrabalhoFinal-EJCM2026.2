@@ -1,0 +1,281 @@
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 80px);
+  background-color: #fcfcfc;
+  padding: 2.5rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.signup-header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.brand-logo {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.brand-icon {
+  background-color: #0d1117 !important;
+  color: #ffffff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+.brand-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  color: #0d1117 !important;
+  background: transparent !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.signup-header-subtitle {
+  color: #6e7781;
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* Card Principal */
+.signup-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 440px;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.signup-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0d1117;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #6e7781;
+  text-align: center;
+  margin-top: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Botões Sociais */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn-social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #24292e;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-social:hover {
+  background-color: #f6f8fa;
+}
+
+/* Divisória */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.divider span {
+  padding: 0 0.75rem;
+  font-size: 0.7rem;
+  color: #8c959f;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Formulário e Inputs */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #24292e;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 0.6rem 0.75rem 0.6rem 2.3rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  outline: none;
+  background-color: #fafafa;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.input-wrapper-no-icon input {
+  padding-left: 0.75rem;
+}
+
+.input-wrapper input:focus {
+  border-color: #0d1117;
+  background-color: #ffffff;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  color: #8c959f;
+  pointer-events: none;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 0.75rem;
+  color: #8c959f;
+  cursor: pointer;
+}
+
+.helper-text {
+  font-size: 0.7rem;
+  color: #8c959f;
+  margin-top: 0.1rem;
+}
+
+/* Checkboxes */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #57606a;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  margin-top: 0.15rem;
+  accent-color: #0d1117;
+}
+
+.checkbox-text a {
+  color: #0d1117;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Botão Submit */
+.btn-submit {
+  width: 100%;
+  background-color: #0d1117;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #24292e;
+}
+
+/* Footer do Card */
+.card-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #6e7781;
+}
+
+.login-link {
+  color: #0d1117;
+  font-weight: 600;
+  text-decoration: underline;
+}
