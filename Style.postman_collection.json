@@ -1,0 +1,3937 @@
+{
+  "info": {
+    "_postman_id": "b47b14f1-fbca-42d8-8832-09e5284c13f5",
+    "name": "Style",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57194662",
+    "_collection_link": "https://go.postman.co/collection/57194662-b47b14f1-fbca-42d8-8832-09e5284c13f5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Delete User",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjN2dmM2owMDA0eDhkaG9vdnBvbDFuIiwiaWF0IjoxNzg3ODc2NDc2LCJleHAiOjE3ODg0ODEyNzZ9.Rw_y1yrYZmXW4gOgqHrdLJMzjdtycpn0pf2SklMGgdakEixL2Nke0nXi-X4JaRVGW1BVYSb2N3reE41hoJ35r1bWYRGbqb-u7hMDE75aecrFW-d5c9tl5uRk5pwyv-oTsNwFHSjhMV2wV8w3h_8Tzzyz-02pSenHTTov1wGDKSl4LgU75ZNkmY_EKcHzWaXsiTYtCKVQnz6S6wYGoQG_aN7bZ3cBmwNeAnhFCnum1cxFnwUggxZFr-B1MTt_7qYIp0U6bOCuVFvo6MnIZEKS8E-tcIDzQPNBjFOx1kxQNJCOKGwinR76KAERkndgR8eARDL0JaidVP-7m4pdzOrlJ-f3y4xvVgQCksmCeEElg7WoOUoD2q3YAlEEFQWwC5jn5qUSmCEZ-GFSyRnfszTh9CzhaNsPX4rTHOhaA7jFbboG0yutLldKXpvWS7tPsDI5auxoMmWQq8gVTnr3haoMwUw1f6Et6h6BRV0BTiqhZ23eR_a2P8wXEOG9bevZk5rM5Q1yWUIJHsESSKS6AhuD9lHYl5ltqQUnV6FMB4WVD4YPQHM6NdlfGnhuz2knMNxn9F_HS9HaeD41I2Ebx6F2RaRdyfsyhJfOsxOsJ5FOIPFg1aVNCZ2RGJx8tluZUV3EfmmMfT4-Xqalq8GDSIq2G2Iig4816fBBjU0ar7B6Ovo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3333/users/cmtc7gf3j0004x8dhoovpol1n",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "users",
+            "cmtc7gf3j0004x8dhoovpol1n"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete User",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3333/users/cmtc7gf3j0004x8dhoovpol1n",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "users",
+                "cmtc7gf3j0004x8dhoovpol1n"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 00:35:48 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Comfyjeans\",\r\n    \"description\":\"calça\",\r\n    \"price\": 125,\r\n    \"rating\": 4.8 ,\r\n    \"categoryId\": \"cmtc8sga90006x8dh77xzl52b\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3333/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Product",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Comfort Slim jeans\",\r\n    \"description\":\"camisa de lã\",\r\n    \"price\": 529,\r\n    \"rating\": 4.8 ,\r\n    \"categoryId\": \"cmtc8sga90006x8dh77xzl52b\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3333/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "236"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ec-4H9ErLYdP023LwoxYch7AdqfYNA\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 00:58:12 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc8t7xd0007x8dhvkxveek7\",\n    \"name\": \"Comfort Slim jeans\",\n    \"description\": \"camisa de lã\",\n    \"price\": 529,\n    \"rating\": 4.8,\n    \"createdAt\": \"2026-08-28T00:58:12.193Z\",\n    \"updatedAt\": \"2026-08-28T00:58:12.193Z\",\n    \"categoryId\": \"cmtc8sga90006x8dh77xzl52b\"\n}"
+        },
+        {
+          "name": "Create Product",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Comfyjeans\",\r\n    \"description\":\"calça\",\r\n    \"price\": 125,\r\n    \"rating\": 4.8 ,\r\n    \"categoryId\": \"cmtc8sga90006x8dh77xzl52b\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3333/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "221"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"dd-iLWzQ0QLULKVFUqCsnsyDsXTFb8\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:08:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtcbc6hc000cx8dhqygc97cb\",\n    \"name\": \"Comfyjeans\",\n    \"description\": \"calça\",\n    \"price\": 125,\n    \"rating\": 4.8,\n    \"createdAt\": \"2026-08-28T02:08:56.017Z\",\n    \"updatedAt\": \"2026-08-28T02:08:56.017Z\",\n    \"categoryId\": \"cmtc8sga90006x8dh77xzl52b\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Buscar Produto",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3333/products/cmtc8t7xd0007x8dhvkxveek7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "products",
+            "cmtc8t7xd0007x8dhvkxveek7"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Buscar Produto",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3333/products/cmtc8t7xd0007x8dhvkxveek7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "products",
+                "cmtc8t7xd0007x8dhvkxveek7"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "236"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ec-4H9ErLYdP023LwoxYch7AdqfYNA\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 01:00:13 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc8t7xd0007x8dhvkxveek7\",\n    \"name\": \"Comfort Slim jeans\",\n    \"description\": \"camisa de lã\",\n    \"price\": 529,\n    \"rating\": 4.8,\n    \"createdAt\": \"2026-08-28T00:58:12.193Z\",\n    \"updatedAt\": \"2026-08-28T00:58:12.193Z\",\n    \"categoryId\": \"cmtc8sga90006x8dh77xzl52b\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Comfort Slim jeans\",\r\n    \"description\":\"calça jeans confortável\",\r\n    \"price\": 529,\r\n    \"rating\": 4.8 \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/products/cmtc8t7xd0007x8dhvkxveek7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "products",
+            "cmtc8t7xd0007x8dhvkxveek7"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Product",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Comfort Slim jeans\",\r\n    \"description\":\"calça jeans confortável\",\r\n    \"price\": 529,\r\n    \"rating\": 4.8 \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/products/cmtc8t7xd0007x8dhvkxveek7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "products",
+                "cmtc8t7xd0007x8dhvkxveek7"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "248"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"f8-L4pGv+7PNJuYWyLJ8ATNFm6+Cio\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 01:03:22 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc8t7xd0007x8dhvkxveek7\",\n    \"name\": \"Comfort Slim jeans\",\n    \"description\": \"calça jeans confortável\",\n    \"price\": 529,\n    \"rating\": 4.8,\n    \"createdAt\": \"2026-08-28T00:58:12.193Z\",\n    \"updatedAt\": \"2026-08-28T01:03:22.155Z\",\n    \"categoryId\": \"cmtc8sga90006x8dh77xzl52b\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3333/products/cmtc94fim0008x8dhjw9fx3g7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "products",
+            "cmtc94fim0008x8dhjw9fx3g7"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete Product",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3333/products/cmtc94fim0008x8dhjw9fx3g7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "products",
+                "cmtc94fim0008x8dhjw9fx3g7"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 01:08:12 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "Create Variant",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{    \r\n    \"size\":\"XL\",\r\n    \"color\":\"brown\",\r\n    \"stockQuantity\": 10,\r\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/productVariant",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "productVariant"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Variant",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \r\n    \"size\":\"XL\",\r\n    \"color\":\"brown\",\r\n    \"stockQuantity\": 10,\r\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/productVariant",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "productVariant"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "199"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c7-nBEvObH/ogCs6vqGssb2fmTkHz8\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 01:18:12 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc9iybv0009x8dhv4yglljq\",\n    \"size\": \"XL\",\n    \"color\": \"brown\",\n    \"stockQuantity\": 10,\n    \"createdAt\": \"2026-08-28T01:18:12.811Z\",\n    \"updatedAt\": \"2026-08-28T01:18:12.811Z\",\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Busca Variante",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/productVariant/cmtc9iybv0009x8dhv4yglljq",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "productVariant",
+            "cmtc9iybv0009x8dhv4yglljq"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Busca Variante",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/productVariant/cmtc9iybv0009x8dhv4yglljq",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "productVariant",
+                "cmtc9iybv0009x8dhv4yglljq"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "199"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c7-nBEvObH/ogCs6vqGssb2fmTkHz8\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 01:23:04 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc9iybv0009x8dhv4yglljq\",\n    \"size\": \"XL\",\n    \"color\": \"brown\",\n    \"stockQuantity\": 10,\n    \"createdAt\": \"2026-08-28T01:18:12.811Z\",\n    \"updatedAt\": \"2026-08-28T01:18:12.811Z\",\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Buscar Variantes do Produto",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/productVariant/product/cmtc8t7xd0007x8dhvkxveek7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "productVariant",
+            "product",
+            "cmtc8t7xd0007x8dhvkxveek7"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Buscar Variantes do Produto",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/productVariant/product/cmtc8t7xd0007x8dhvkxveek7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "productVariant",
+                "product",
+                "cmtc8t7xd0007x8dhvkxveek7"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "401"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"191-c05ve9tzZLYTggpa3ViP06Mj4Eo\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 01:33:08 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": \"cmtc9iybv0009x8dhv4yglljq\",\n        \"size\": \"XL\",\n        \"color\": \"brown\",\n        \"stockQuantity\": 10,\n        \"createdAt\": \"2026-08-28T01:18:12.811Z\",\n        \"updatedAt\": \"2026-08-28T01:18:12.811Z\",\n        \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\n    },\n    {\n        \"id\": \"cmtca0hfi000ax8dhg2nxrgod\",\n        \"size\": \"XL\",\n        \"color\": \"white\",\n        \"stockQuantity\": 10,\n        \"createdAt\": \"2026-08-28T01:31:50.718Z\",\n        \"updatedAt\": \"2026-08-28T01:31:50.718Z\",\n        \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Update Variant",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{    \r\n    \"size\":\"XL\",\r\n    \"color\":\"black\",\r\n    \"stockQuantity\": 10,\r\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/productVariant/cmtca0hfi000ax8dhg2nxrgod",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "productVariant",
+            "cmtca0hfi000ax8dhg2nxrgod"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Variant",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \r\n    \"size\":\"XL\",\r\n    \"color\":\"black\",\r\n    \"stockQuantity\": 10,\r\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/productVariant/cmtca0hfi000ax8dhg2nxrgod",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "productVariant",
+                "cmtca0hfi000ax8dhg2nxrgod"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "199"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c7-ESznYj6Coz9hKs6P4ynByKkZVoI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 01:33:37 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtca0hfi000ax8dhg2nxrgod\",\n    \"size\": \"XL\",\n    \"color\": \"black\",\n    \"stockQuantity\": 10,\n    \"createdAt\": \"2026-08-28T01:31:50.718Z\",\n    \"updatedAt\": \"2026-08-28T01:33:37.437Z\",\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Stock",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"quantityToAdd\": 5\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/productVariant/cmtc9iybv0009x8dhv4yglljq/stockQuantity",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "productVariant",
+            "cmtc9iybv0009x8dhv4yglljq",
+            "stockQuantity"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Stock",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"quantityToAdd\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/productVariant/cmtc9iybv0009x8dhv4yglljq/stockQuantity",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "productVariant",
+                "cmtc9iybv0009x8dhv4yglljq",
+                "stockQuantity"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "199"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c7-Gf+ALQ1uh5rqJdaTszOJul+MyS0\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 01:42:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc9iybv0009x8dhv4yglljq\",\n    \"size\": \"XL\",\n    \"color\": \"brown\",\n    \"stockQuantity\": 15,\n    \"createdAt\": \"2026-08-28T01:18:12.811Z\",\n    \"updatedAt\": \"2026-08-28T01:42:24.400Z\",\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Variant",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/productVariant/cmtcal200000bx8dh8xw88j16",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "productVariant",
+            "cmtcal200000bx8dh8xw88j16"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete Variant",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/productVariant/cmtcal200000bx8dh8xw88j16",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "productVariant",
+                "cmtcal200000bx8dh8xw88j16"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "199"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c7-J4Lwzf5aY4RU4ZvJ6HvqoF54TXs\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 01:48:41 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtcal200000bx8dh8xw88j16\",\n    \"size\": \"XL\",\n    \"color\": \"brown\",\n    \"stockQuantity\": 10,\n    \"createdAt\": \"2026-08-28T01:47:50.496Z\",\n    \"updatedAt\": \"2026-08-28T01:47:50.496Z\",\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Category",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Bottoms\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3333/categories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "categories"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Category",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Bottoms\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3333/categories",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "129"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"81-pX1d/otRR6viuQ5BgxBcTvfbuLc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 00:57:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc8sga90006x8dh77xzl52b\",\n    \"name\": \"Bottoms\",\n    \"createdAt\": \"2026-08-28T00:57:36.369Z\",\n    \"updatedAt\": \"2026-08-28T00:57:36.369Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Category 2",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Accessories\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3333/categories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "categories"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Category 2",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Accessories\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3333/categories",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "133"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"85-DM7TJTG4E4BuWM3yPksAJ6XlLAU\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:19:29 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtcbpriz000dx8dh56wmrqrb\",\n    \"name\": \"Accessories\",\n    \"createdAt\": \"2026-08-28T02:19:29.819Z\",\n    \"updatedAt\": \"2026-08-28T02:19:29.819Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Category 3",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Tops\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/categories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "categories"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Category 3",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Tops\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/categories",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "126"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"7e-CFyLYyW/dNaQ8yUu2Abjm3C7b3s\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:22:14 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtcbtavr000ex8dhqrbsw3o6\",\n    \"name\": \"Tops\",\n    \"createdAt\": \"2026-08-28T02:22:14.871Z\",\n    \"updatedAt\": \"2026-08-28T02:22:14.871Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get One Category",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/categories/cmtc8sga90006x8dh77xzl52b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "categories",
+            "cmtc8sga90006x8dh77xzl52b"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get One Category",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/categories/cmtc8sga90006x8dh77xzl52b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "categories",
+                "cmtc8sga90006x8dh77xzl52b"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "129"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"81-pX1d/otRR6viuQ5BgxBcTvfbuLc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:25:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc8sga90006x8dh77xzl52b\",\n    \"name\": \"Bottoms\",\n    \"createdAt\": \"2026-08-28T00:57:36.369Z\",\n    \"updatedAt\": \"2026-08-28T00:57:36.369Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get All Categories",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/categories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "categories"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get All Categories",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/categories",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "392"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"188-fTNuGWRjfURtUFerCBVTaoJFDAI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:24:50 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": \"cmtc8sga90006x8dh77xzl52b\",\n        \"name\": \"Bottoms\",\n        \"createdAt\": \"2026-08-28T00:57:36.369Z\",\n        \"updatedAt\": \"2026-08-28T00:57:36.369Z\"\n    },\n    {\n        \"id\": \"cmtcbpriz000dx8dh56wmrqrb\",\n        \"name\": \"Accessories\",\n        \"createdAt\": \"2026-08-28T02:19:29.819Z\",\n        \"updatedAt\": \"2026-08-28T02:19:29.819Z\"\n    },\n    {\n        \"id\": \"cmtcbtavr000ex8dhqrbsw3o6\",\n        \"name\": \"Tops\",\n        \"createdAt\": \"2026-08-28T02:22:14.871Z\",\n        \"updatedAt\": \"2026-08-28T02:22:14.871Z\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Update Category",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Upper\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/categories/cmtcbtavr000ex8dhqrbsw3o6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "categories",
+            "cmtcbtavr000ex8dhqrbsw3o6"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Category",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Upper\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/categories/cmtcbtavr000ex8dhqrbsw3o6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "categories",
+                "cmtcbtavr000ex8dhqrbsw3o6"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "127"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"7f-G+IPl7wD4mLdxCrzaxRiWy8iS68\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:30:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtcbtavr000ex8dhqrbsw3o6\",\n    \"name\": \"Upper\",\n    \"createdAt\": \"2026-08-28T02:22:14.871Z\",\n    \"updatedAt\": \"2026-08-28T02:30:10.757Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Category 3",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/categories/cmtcbtavr000ex8dhqrbsw3o6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "categories",
+            "cmtcbtavr000ex8dhqrbsw3o6"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete Category 3",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/categories/cmtcbtavr000ex8dhqrbsw3o6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "categories",
+                "cmtcbtavr000ex8dhqrbsw3o6"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "32"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"20-pMV5UhXdewLIfEqW23QIZPRySiQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:31:06 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Categoria removida\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete AllWishlist",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "wishlist",
+            "cmtc6owk70000x8dhx2w265q4"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete AllWishlist",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "wishlist",
+                "cmtc6owk70000x8dhx2w265q4"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "11"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"b-qA97yBec1rrOyf2eVsYdWwFPOso\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:12:59 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"count\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Cart",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/cart",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "cart"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Cart",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/cart",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "192"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c0-rTVRRncd5efRvYiqXTCFPQnrQLY\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 03:05:19 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtcdcpep00002wdhtkkj9388\",\n    \"totalPrice\": 0,\n    \"savings\": 0,\n    \"createdAt\": \"2026-08-28T03:05:19.779Z\",\n    \"updatedAt\": \"2026-08-28T03:05:19.779Z\",\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n    \"couponId\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Cart",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/cart/cmtcdcpep00002wdhtkkj9388",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "cart",
+            "cmtcdcpep00002wdhtkkj9388"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Cart",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/cart/cmtcdcpep00002wdhtkkj9388",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "cart",
+                "cmtcdcpep00002wdhtkkj9388"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "203"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"cb-+kCG/jsSqk6qFWCkfJwVG92OEe0\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 03:10:11 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtcdcpep00002wdhtkkj9388\",\n    \"totalPrice\": 0,\n    \"savings\": 0,\n    \"createdAt\": \"2026-08-28T03:05:19.779Z\",\n    \"updatedAt\": \"2026-08-28T03:10:11.042Z\",\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n    \"couponId\": null,\n    \"items\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create ItemCart",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"quantity\": 1,\r\n    \"cartId\": \"cmtcdcpep00002wdhtkkj9388\",\r\n    \"variantId\": \"cmtciv2c40003dkdhe2dddwcc\" \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/cartitem",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "cartitem"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create ItemCart",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"quantity\": 1,\r\n    \"cartId\": \"cmtcdcpep00002wdhtkkj9388\",\r\n    \"variantId\": \"cmtcelv9100032wdhk6owgw18\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/cartitem",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "cartitem"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "218"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"da-Fmn/6ZQQP6ZuOIJzBb+0cBuWb1Y\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 03:36:31 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": "{\n    \"id\": \"cmtcegtr000022wdhf0vtzac5\",\n    \"quantity\": 1,\n    \"unitPrice\": 529,\n    \"createdAt\": \"2026-08-28T03:36:31.644Z\",\n    \"updatedAt\": \"2026-08-28T03:36:31.644Z\",\n    \"cartId\": \"cmtcdcpep00002wdhtkkj9388\",\n    \"variantId\": \"cmtca0hfi000ax8dhg2nxrgod\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get CartItem",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/cartitem/cmtcegtr000022wdhf0vtzac5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "cartitem",
+            "cmtcegtr000022wdhf0vtzac5"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Cart",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/cartitem/cmtcegtr000022wdhf0vtzac5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "cartitem",
+                "cmtcegtr000022wdhf0vtzac5"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "218"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"da-Fmn/6ZQQP6ZuOIJzBb+0cBuWb1Y\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 03:38:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtcegtr000022wdhf0vtzac5\",\n    \"quantity\": 1,\n    \"unitPrice\": 529,\n    \"createdAt\": \"2026-08-28T03:36:31.644Z\",\n    \"updatedAt\": \"2026-08-28T03:36:31.644Z\",\n    \"cartId\": \"cmtcdcpep00002wdhtkkj9388\",\n    \"variantId\": \"cmtca0hfi000ax8dhg2nxrgod\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update CartItem",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"quantity\": 4\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/cartitem/cmtcegtr000022wdhf0vtzac5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "cartitem",
+            "cmtcegtr000022wdhf0vtzac5"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update CartItem",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"quantity\": 4\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/cartitem/cmtcegtr000022wdhf0vtzac5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "cartitem",
+                "cmtcegtr000022wdhf0vtzac5"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "218"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"da-nljJjNeDNVguJprlN2aPZwH3cDI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 04:07:40 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtcegtr000022wdhf0vtzac5\",\n    \"quantity\": 4,\n    \"unitPrice\": 529,\n    \"createdAt\": \"2026-08-28T03:36:31.644Z\",\n    \"updatedAt\": \"2026-08-28T04:07:40.547Z\",\n    \"cartId\": \"cmtcdcpep00002wdhtkkj9388\",\n    \"variantId\": \"cmtca0hfi000ax8dhg2nxrgod\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete CartItem",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/cartitem/cart/cmtcdcpep00002wdhtkkj9388/item/cmtcegtr000022wdhf0vtzac5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "cartitem",
+            "cart",
+            "cmtcdcpep00002wdhtkkj9388",
+            "item",
+            "cmtcegtr000022wdhf0vtzac5"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete CartItem",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/cartitem/cart/cmtcdcpep00002wdhtkkj9388/item/cmtcegtr000022wdhf0vtzac5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "cartitem",
+                "cart",
+                "cmtcdcpep00002wdhtkkj9388",
+                "item",
+                "cmtcegtr000022wdhf0vtzac5"
+              ]
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "512"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"200-qIHK+8aSeT8u2lcUzROuGXcxKgI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 04:18:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"error\": \"\\nInvalid `prisma.cartItem.delete()` invocation in\\nC:\\\\Users\\\\User.M2B-3044\\\\OneDrive\\\\Área de Trabalho\\\\EJCM\\\\Treinamento\\\\Style\\\\TrabalhoFinal-EJCM2026.2\\\\back\\\\src\\\\controllers\\\\CartItemController.ts:124:61\\n\\n  121 }\\n  122 \\n  123 \\n→ 124 const deletedItem = await prisma.cartItem.delete({\\n        where: {\\n          cartId_variantId: {\\n            cartId: \\\"cmtcdcpep00002wdhtkkj9388\\\",\\n      +     variantId: String\\n          }\\n        }\\n      })\\n\\nArgument `variantId` is missing.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{    \r\n    \"status\": \"PENDING_PAYMENT\",\r\n    \"totalPrice\": 199.9,\r\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\r\n    \"orderItems\": [{ \"quantity\": 1, \"unitPrice\": 199.9, \"variantId\": \"cmtciv2c40003dkdhe2dddwcc\" }],\r\n    \"shipping\": {\r\n      \"shippingMethod\": \"Standard\", \"shippingCost\": 10,\r\n      \"recipientFirstName\": \"John\", \"recipientLastName\": \"Doe\",\r\n      \"zipCode\": \"12345000\", \"streetAddress\": \"Rua Teste, 123\",\r\n      \"city\": \"Sao Paulo\", \"state\": \"SP\"\r\n    }\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Order",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \r\n    \"status\": \"PENDING_PAYMENT\",\r\n    \"totalPrice\": 199.9,\r\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\r\n    \"orderItems\": [{ \"quantity\": 1, \"unitPrice\": 199.9, \"variantId\": \"cmtciv2c40003dkdhe2dddwcc\" }],\r\n    \"shipping\": {\r\n      \"shippingMethod\": \"Standard\", \"shippingCost\": 10,\r\n      \"recipientFirstName\": \"John\", \"recipientLastName\": \"Doe\",\r\n      \"zipCode\": \"12345000\", \"streetAddress\": \"Rua Teste, 123\",\r\n      \"city\": \"Sao Paulo\", \"state\": \"SP\"\r\n    }\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1686"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"696-8C6y2uLTLwQI8FCGQpIawGHf0jE\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 05:42:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtciyet80005dkdhbes5vl4y\",\n    \"status\": \"PENDING_PAYMENT\",\n    \"totalPrice\": 199.9,\n    \"placedOn\": \"2026-08-28T05:42:10.556Z\",\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n    \"billingSameAsShipping\": true,\n    \"billingFirstName\": null,\n    \"billingLastName\": null,\n    \"billingZipCode\": null,\n    \"billingStreetAddress\": null,\n    \"billingApartmentSuite\": null,\n    \"billingCity\": null,\n    \"billingState\": null,\n    \"createdAt\": \"2026-08-28T05:42:10.556Z\",\n    \"updatedAt\": \"2026-08-28T05:42:10.556Z\",\n    \"user\": {\n        \"id\": \"cmtc6owk70000x8dhx2w265q4\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"email\": \"john.doe@example.com\",\n        \"phone\": null\n    },\n    \"orderItems\": [\n        {\n            \"id\": \"cmtciyeti0006dkdh8p89knn0\",\n            \"quantity\": 1,\n            \"unitPrice\": 199.9,\n            \"orderId\": \"cmtciyet80005dkdhbes5vl4y\",\n            \"variantId\": \"cmtciv2c40003dkdhe2dddwcc\",\n            \"createdAt\": \"2026-08-28T05:42:10.556Z\",\n            \"updatedAt\": \"2026-08-28T05:42:10.556Z\",\n            \"variant\": {\n                \"id\": \"cmtciv2c40003dkdhe2dddwcc\",\n                \"size\": \"XL\",\n                \"color\": \"red\",\n                \"stockQuantity\": 10,\n                \"createdAt\": \"2026-08-28T05:39:34.420Z\",\n                \"updatedAt\": \"2026-08-28T05:39:34.420Z\",\n                \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\",\n                \"product\": {\n                    \"id\": \"cmtc8t7xd0007x8dhvkxveek7\",\n                    \"name\": \"Comfort Slim jeans\",\n                    \"description\": \"calça jeans confortável\",\n                    \"price\": 529,\n                    \"rating\": 4.8,\n                    \"createdAt\": \"2026-08-28T00:58:12.193Z\",\n                    \"updatedAt\": \"2026-08-28T01:03:22.155Z\",\n                    \"categoryId\": \"cmtc8sga90006x8dh77xzl52b\"\n                }\n            }\n        }\n    ],\n    \"shipping\": {\n        \"id\": \"cmtciyetu0007dkdhb5p1r0er\",\n        \"shippingMethod\": \"Standard\",\n        \"shippingCost\": 10,\n        \"trackingNumber\": null,\n        \"recipientFirstName\": \"John\",\n        \"recipientLastName\": \"Doe\",\n        \"zipCode\": \"12345000\",\n        \"streetAddress\": \"Rua Teste, 123\",\n        \"apartmentSuite\": null,\n        \"city\": \"Sao Paulo\",\n        \"state\": \"SP\",\n        \"createdAt\": \"2026-08-28T05:42:10.556Z\",\n        \"updatedAt\": \"2026-08-28T05:42:10.556Z\",\n        \"orderId\": \"cmtciyet80005dkdhbes5vl4y\",\n        \"shippingStatus\": \"PENDING\"\n    },\n    \"payments\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/orders/cmtciyet80005dkdhbes5vl4y",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "orders",
+            "cmtciyet80005dkdhbes5vl4y"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Order",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/orders/cmtciyet80005dkdhbes5vl4y",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "orders",
+                "cmtciyet80005dkdhbes5vl4y"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1673"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"689-RDwIAP477hVZUb2de/W+QsWaDc4\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 05:44:08 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtciyet80005dkdhbes5vl4y\",\n    \"status\": \"PENDING_PAYMENT\",\n    \"totalPrice\": 199.9,\n    \"placedOn\": \"2026-08-28T05:42:10.556Z\",\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n    \"billingSameAsShipping\": true,\n    \"billingFirstName\": null,\n    \"billingLastName\": null,\n    \"billingZipCode\": null,\n    \"billingStreetAddress\": null,\n    \"billingApartmentSuite\": null,\n    \"billingCity\": null,\n    \"billingState\": null,\n    \"createdAt\": \"2026-08-28T05:42:10.556Z\",\n    \"updatedAt\": \"2026-08-28T05:42:10.556Z\",\n    \"user\": {\n        \"id\": \"cmtc6owk70000x8dhx2w265q4\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"email\": \"john.doe@example.com\"\n    },\n    \"orderItems\": [\n        {\n            \"id\": \"cmtciyeti0006dkdh8p89knn0\",\n            \"quantity\": 1,\n            \"unitPrice\": 199.9,\n            \"orderId\": \"cmtciyet80005dkdhbes5vl4y\",\n            \"variantId\": \"cmtciv2c40003dkdhe2dddwcc\",\n            \"createdAt\": \"2026-08-28T05:42:10.556Z\",\n            \"updatedAt\": \"2026-08-28T05:42:10.556Z\",\n            \"variant\": {\n                \"id\": \"cmtciv2c40003dkdhe2dddwcc\",\n                \"size\": \"XL\",\n                \"color\": \"red\",\n                \"stockQuantity\": 10,\n                \"createdAt\": \"2026-08-28T05:39:34.420Z\",\n                \"updatedAt\": \"2026-08-28T05:39:34.420Z\",\n                \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\",\n                \"product\": {\n                    \"id\": \"cmtc8t7xd0007x8dhvkxveek7\",\n                    \"name\": \"Comfort Slim jeans\",\n                    \"description\": \"calça jeans confortável\",\n                    \"price\": 529,\n                    \"rating\": 4.8,\n                    \"createdAt\": \"2026-08-28T00:58:12.193Z\",\n                    \"updatedAt\": \"2026-08-28T01:03:22.155Z\",\n                    \"categoryId\": \"cmtc8sga90006x8dh77xzl52b\"\n                }\n            }\n        }\n    ],\n    \"shipping\": {\n        \"id\": \"cmtciyetu0007dkdhb5p1r0er\",\n        \"shippingMethod\": \"Standard\",\n        \"shippingCost\": 10,\n        \"trackingNumber\": null,\n        \"recipientFirstName\": \"John\",\n        \"recipientLastName\": \"Doe\",\n        \"zipCode\": \"12345000\",\n        \"streetAddress\": \"Rua Teste, 123\",\n        \"apartmentSuite\": null,\n        \"city\": \"Sao Paulo\",\n        \"state\": \"SP\",\n        \"createdAt\": \"2026-08-28T05:42:10.556Z\",\n        \"updatedAt\": \"2026-08-28T05:42:10.556Z\",\n        \"orderId\": \"cmtciyet80005dkdhbes5vl4y\",\n        \"shippingStatus\": \"PENDING\"\n    },\n    \"payments\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"status\": \"CONFIRMED\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/orders/cmtciyet80005dkdhbes5vl4y",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "orders",
+            "cmtciyet80005dkdhbes5vl4y"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Order",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"status\": \"CONFIRMED\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/orders/cmtciyet80005dkdhbes5vl4y",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "orders",
+                "cmtciyet80005dkdhbes5vl4y"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1091"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"443-jjuHy+e8tBsyQ6dBW4PteE5O90A\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 05:46:33 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtciyet80005dkdhbes5vl4y\",\n    \"status\": \"CONFIRMED\",\n    \"totalPrice\": 199.9,\n    \"placedOn\": \"2026-08-28T05:42:10.556Z\",\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n    \"billingSameAsShipping\": true,\n    \"billingFirstName\": null,\n    \"billingLastName\": null,\n    \"billingZipCode\": null,\n    \"billingStreetAddress\": null,\n    \"billingApartmentSuite\": null,\n    \"billingCity\": null,\n    \"billingState\": null,\n    \"createdAt\": \"2026-08-28T05:42:10.556Z\",\n    \"updatedAt\": \"2026-08-28T05:46:33.026Z\",\n    \"orderItems\": [\n        {\n            \"id\": \"cmtciyeti0006dkdh8p89knn0\",\n            \"quantity\": 1,\n            \"unitPrice\": 199.9,\n            \"orderId\": \"cmtciyet80005dkdhbes5vl4y\",\n            \"variantId\": \"cmtciv2c40003dkdhe2dddwcc\",\n            \"createdAt\": \"2026-08-28T05:42:10.556Z\",\n            \"updatedAt\": \"2026-08-28T05:42:10.556Z\"\n        }\n    ],\n    \"shipping\": {\n        \"id\": \"cmtciyetu0007dkdhb5p1r0er\",\n        \"shippingMethod\": \"Standard\",\n        \"shippingCost\": 10,\n        \"trackingNumber\": null,\n        \"recipientFirstName\": \"John\",\n        \"recipientLastName\": \"Doe\",\n        \"zipCode\": \"12345000\",\n        \"streetAddress\": \"Rua Teste, 123\",\n        \"apartmentSuite\": null,\n        \"city\": \"Sao Paulo\",\n        \"state\": \"SP\",\n        \"createdAt\": \"2026-08-28T05:42:10.556Z\",\n        \"updatedAt\": \"2026-08-28T05:42:10.556Z\",\n        \"orderId\": \"cmtciyet80005dkdhbes5vl4y\",\n        \"shippingStatus\": \"PENDING\"\n    },\n    \"payments\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/orders/cmtciyet80005dkdhbes5vl4y",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "orders",
+            "cmtciyet80005dkdhbes5vl4y"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete Order",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/orders/cmtciyet80005dkdhbes5vl4y",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "orders",
+                "cmtciyet80005dkdhbes5vl4y"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 05:54:11 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\":\"John\",\r\n    \"lastName\":\"Doe\", \r\n    \"email\": \"john.doe@example.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\":\"John\",\r\n    \"lastName\":\"Doe\", \r\n    \"email\": \"johndoe@example.com\",\r\n    \"password\":\"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "224"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"e0-wGc4Xqa2SdTh/C46Coe1CUD1GNE\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 00:20:15 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc7gf3j0004x8dhoovpol1n\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@example.com\",\n    \"phone\": null,\n    \"dateOfBirth\": null,\n    \"gender\": null,\n    \"createdAt\": \"2026-08-28T00:20:15.343Z\",\n    \"updatedAt\": \"2026-08-28T00:20:15.343Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"johndoe@example.com\",\r\n    \"password\":\"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Login User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"johndoe@example.com\",\r\n    \"password\":\"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1057"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"421-cAfo36lQTzBhGJXJcmF0oSPEcjo\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 00:21:16 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"user\": {\n        \"id\": \"cmtc7gf3j0004x8dhoovpol1n\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"email\": \"johndoe@example.com\",\n        \"phone\": null,\n        \"dateOfBirth\": null,\n        \"gender\": null,\n        \"createdAt\": \"2026-08-28T00:20:15.343Z\",\n        \"updatedAt\": \"2026-08-28T00:20:15.343Z\"\n    },\n    \"token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjN2dmM2owMDA0eDhkaG9vdnBvbDFuIiwiaWF0IjoxNzg3ODc2NDc2LCJleHAiOjE3ODg0ODEyNzZ9.Rw_y1yrYZmXW4gOgqHrdLJMzjdtycpn0pf2SklMGgdakEixL2Nke0nXi-X4JaRVGW1BVYSb2N3reE41hoJ35r1bWYRGbqb-u7hMDE75aecrFW-d5c9tl5uRk5pwyv-oTsNwFHSjhMV2wV8w3h_8Tzzyz-02pSenHTTov1wGDKSl4LgU75ZNkmY_EKcHzWaXsiTYtCKVQnz6S6wYGoQG_aN7bZ3cBmwNeAnhFCnum1cxFnwUggxZFr-B1MTt_7qYIp0U6bOCuVFvo6MnIZEKS8E-tcIDzQPNBjFOx1kxQNJCOKGwinR76KAERkndgR8eARDL0JaidVP-7m4pdzOrlJ-f3y4xvVgQCksmCeEElg7WoOUoD2q3YAlEEFQWwC5jn5qUSmCEZ-GFSyRnfszTh9CzhaNsPX4rTHOhaA7jFbboG0yutLldKXpvWS7tPsDI5auxoMmWQq8gVTnr3haoMwUw1f6Et6h6BRV0BTiqhZ23eR_a2P8wXEOG9bevZk5rM5Q1yWUIJHsESSKS6AhuD9lHYl5ltqQUnV6FMB4WVD4YPQHM6NdlfGnhuz2knMNxn9F_HS9HaeD41I2Ebx6F2RaRdyfsyhJfOsxOsJ5FOIPFg1aVNCZ2RGJx8tluZUV3EfmmMfT4-Xqalq8GDSIq2G2Iig4816fBBjU0ar7B6Ovo\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "buscar User",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjN2dmM2owMDA0eDhkaG9vdnBvbDFuIiwiaWF0IjoxNzg3ODc2NDc2LCJleHAiOjE3ODg0ODEyNzZ9.Rw_y1yrYZmXW4gOgqHrdLJMzjdtycpn0pf2SklMGgdakEixL2Nke0nXi-X4JaRVGW1BVYSb2N3reE41hoJ35r1bWYRGbqb-u7hMDE75aecrFW-d5c9tl5uRk5pwyv-oTsNwFHSjhMV2wV8w3h_8Tzzyz-02pSenHTTov1wGDKSl4LgU75ZNkmY_EKcHzWaXsiTYtCKVQnz6S6wYGoQG_aN7bZ3cBmwNeAnhFCnum1cxFnwUggxZFr-B1MTt_7qYIp0U6bOCuVFvo6MnIZEKS8E-tcIDzQPNBjFOx1kxQNJCOKGwinR76KAERkndgR8eARDL0JaidVP-7m4pdzOrlJ-f3y4xvVgQCksmCeEElg7WoOUoD2q3YAlEEFQWwC5jn5qUSmCEZ-GFSyRnfszTh9CzhaNsPX4rTHOhaA7jFbboG0yutLldKXpvWS7tPsDI5auxoMmWQq8gVTnr3haoMwUw1f6Et6h6BRV0BTiqhZ23eR_a2P8wXEOG9bevZk5rM5Q1yWUIJHsESSKS6AhuD9lHYl5ltqQUnV6FMB4WVD4YPQHM6NdlfGnhuz2knMNxn9F_HS9HaeD41I2Ebx6F2RaRdyfsyhJfOsxOsJ5FOIPFg1aVNCZ2RGJx8tluZUV3EfmmMfT4-Xqalq8GDSIq2G2Iig4816fBBjU0ar7B6Ovo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/users/cmtc7gf3j0004x8dhoovpol1n",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "users",
+            "cmtc7gf3j0004x8dhoovpol1n"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "buscar User",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/users/cmtc7gf3j0004x8dhoovpol1n",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "users",
+                "cmtc7gf3j0004x8dhoovpol1n"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "224"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"e0-wGc4Xqa2SdTh/C46Coe1CUD1GNE\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 00:26:53 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc7gf3j0004x8dhoovpol1n\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@example.com\",\n    \"phone\": null,\n    \"dateOfBirth\": null,\n    \"gender\": null,\n    \"createdAt\": \"2026-08-28T00:20:15.343Z\",\n    \"updatedAt\": \"2026-08-28T00:20:15.343Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "User Update",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjN2dmM2owMDA0eDhkaG9vdnBvbDFuIiwiaWF0IjoxNzg3ODc2NDc2LCJleHAiOjE3ODg0ODEyNzZ9.Rw_y1yrYZmXW4gOgqHrdLJMzjdtycpn0pf2SklMGgdakEixL2Nke0nXi-X4JaRVGW1BVYSb2N3reE41hoJ35r1bWYRGbqb-u7hMDE75aecrFW-d5c9tl5uRk5pwyv-oTsNwFHSjhMV2wV8w3h_8Tzzyz-02pSenHTTov1wGDKSl4LgU75ZNkmY_EKcHzWaXsiTYtCKVQnz6S6wYGoQG_aN7bZ3cBmwNeAnhFCnum1cxFnwUggxZFr-B1MTt_7qYIp0U6bOCuVFvo6MnIZEKS8E-tcIDzQPNBjFOx1kxQNJCOKGwinR76KAERkndgR8eARDL0JaidVP-7m4pdzOrlJ-f3y4xvVgQCksmCeEElg7WoOUoD2q3YAlEEFQWwC5jn5qUSmCEZ-GFSyRnfszTh9CzhaNsPX4rTHOhaA7jFbboG0yutLldKXpvWS7tPsDI5auxoMmWQq8gVTnr3haoMwUw1f6Et6h6BRV0BTiqhZ23eR_a2P8wXEOG9bevZk5rM5Q1yWUIJHsESSKS6AhuD9lHYl5ltqQUnV6FMB4WVD4YPQHM6NdlfGnhuz2knMNxn9F_HS9HaeD41I2Ebx6F2RaRdyfsyhJfOsxOsJ5FOIPFg1aVNCZ2RGJx8tluZUV3EfmmMfT4-Xqalq8GDSIq2G2Iig4816fBBjU0ar7B6Ovo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\":\"John\",\r\n    \"lastName\":\"Doe\", \r\n    \"email\": \"johndoe@example.com\",\r\n    \"phone\":\"(21) 9 9534-3754\", \r\n    \"gender\":\"M\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/users/cmtc7gf3j0004x8dhoovpol1n",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "users",
+            "cmtc7gf3j0004x8dhoovpol1n"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "User Update",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\":\"John\",\r\n    \"lastName\":\"Doe\", \r\n    \"email\": \"johndoe@example.com\",\r\n    \"phone\":\"(21) 9 9534-3754\", \r\n    \"gender\":\"M\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/users/cmtc7gf3j0004x8dhoovpol1n",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "users",
+                "cmtc7gf3j0004x8dhoovpol1n"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "237"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ed-ENID0uOdyCdLOAXNDymHfs2dvtI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 00:32:26 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": \"cmtc7gf3j0004x8dhoovpol1n\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@example.com\",\n    \"phone\": \"(21) 9 9534-3754\",\n    \"dateOfBirth\": null,\n    \"gender\": \"M\",\n    \"createdAt\": \"2026-08-28T00:20:15.343Z\",\n    \"updatedAt\": \"2026-08-28T00:32:26.615Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"john.doe@example.com\",\r\n    \"password\":\"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Login User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"john.doe@example.com\",\r\n    \"password\":\"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1058"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"422-s7J4xEllFPsM0YgJGzDtnjgMAv0\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 00:37:41 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"user\": {\n        \"id\": \"cmtc6owk70000x8dhx2w265q4\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"email\": \"john.doe@example.com\",\n        \"phone\": null,\n        \"dateOfBirth\": null,\n        \"gender\": null,\n        \"createdAt\": \"2026-08-27T23:58:51.607Z\",\n        \"updatedAt\": \"2026-08-27T23:58:51.607Z\"\n    },\n    \"token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "creat prod2",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Creat Whishlist",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{    \r\n    \"productId\": \"cmtcbc6hc000cx8dhqygc97cb\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "wishlist",
+            "cmtc6owk70000x8dhx2w265q4"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Creat Whishlist",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \r\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "wishlist",
+                "cmtc6owk70000x8dhx2w265q4"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "117"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"75-RjvOJhw6pSEm36JzOsWrmy3AzoU\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:03:17 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n    \"createdAt\": \"2026-08-28T02:03:17.290Z\",\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\n}"
+        },
+        {
+          "name": "Creat Whishlist",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \r\n    \"productId\": \"cmtcbc6hc000cx8dhqygc97cb\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "wishlist",
+                "cmtc6owk70000x8dhx2w265q4"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "117"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"75-zC5oOZ3gEmmUJlnsobDAe8iUtYI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:09:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n    \"createdAt\": \"2026-08-28T02:09:46.147Z\",\n    \"productId\": \"cmtcbc6hc000cx8dhqygc97cb\"\n}"
+        },
+        {
+          "name": "Creat Whishlist",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \r\n    \"productId\": \"cmtcbc6hc000cx8dhqygc97cb\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "wishlist",
+                "cmtc6owk70000x8dhx2w265q4"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "117"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"75-zC5oOZ3gEmmUJlnsobDAe8iUtYI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:09:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n    \"createdAt\": \"2026-08-28T02:09:46.147Z\",\n    \"productId\": \"cmtcbc6hc000cx8dhqygc97cb\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Busca Wishlist",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "wishlist",
+            "cmtc6owk70000x8dhx2w265q4"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Busca Wishlist",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "wishlist",
+                "cmtc6owk70000x8dhx2w265q4"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "184"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"b8-V0uIQXhNjsFkAkP4rfGsGJT4qi4\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:05:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n        \"createdAt\": \"2026-08-28T02:03:17.290Z\",\n        \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\",\n        \"product\": {\n            \"name\": \"Comfort Slim jeans\",\n            \"price\": 529,\n            \"rating\": 4.8\n        }\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Delete OneWishlist",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4/product/cmtcbc6hc000cx8dhqygc97cb",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "wishlist",
+            "cmtc6owk70000x8dhx2w265q4",
+            "product",
+            "cmtcbc6hc000cx8dhqygc97cb"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete OneWishlist",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3333/wishlist/cmtc6owk70000x8dhx2w265q4/product/cmtcbc6hc000cx8dhqygc97cb",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3333",
+              "path": [
+                "wishlist",
+                "cmtc6owk70000x8dhx2w265q4",
+                "product",
+                "cmtcbc6hc000cx8dhqygc97cb"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "117"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"75-zC5oOZ3gEmmUJlnsobDAe8iUtYI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 28 Aug 2026 02:11:31 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"userId\": \"cmtc6owk70000x8dhx2w265q4\",\n    \"createdAt\": \"2026-08-28T02:09:46.147Z\",\n    \"productId\": \"cmtcbc6hc000cx8dhqygc97cb\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Variant",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{    \r\n    \"size\":\"XL\",\r\n    \"color\":\"red\",\r\n    \"stockQuantity\": 10,\r\n    \"productId\": \"cmtc8t7xd0007x8dhvkxveek7\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/productVariant",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "productVariant"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXRjNm93azcwMDAweDhkaHgydzI2NXE0IiwiaWF0IjoxNzg3ODc3NDYxLCJleHAiOjE3ODg0ODIyNjF9.ELUX1_rNXd0bwAv6lTr6MciekYtU6Zb-DwOZZ8EbJD8Aff6sKph_zUwyEgJ27waK_gNoAIzrlI8vuOna-edc2yPFtQZvQrPLaSYjTJVgSM33RTa_IGri8woYmrTUcSe0eA5nJQxj7OGJ0VXhUH7HWjFS4XBWzCiRl8qUdrp5PTji-Q7Czgq9DLooVtVTwH4Eow4twltaJFv0RI1H_JYMUETwDdcUaWXkBX0fMuB1QYUJLxT6pQ3b5AzfBErY8tanJD7zqOzkRzdKwc25EjzkYq0_yayTUulR4nFLhb5cNd3p1y_DaKTy4UTkql6TkfYTiG0IEiVMi8U5qvkdIzq2zka60bDcGb2-wh63q0sJCLNEvYp2sFovIGTwTnv6D0wXCOKZkk8uoAsNapq6PtU7kRxTUOHM24gHnZdbXpZGVqMRkGwoSKQSRWiueJ4Fun19wyfwwJzlYv_LJNySvCyoD_Nc-qvAOFq-yNsrHvYOSbHfmXAtTRouKmq36QJZssnJCXW_zl0AfX-vhhcH-dWP6b2-k-sH7ipxw49eL4UZDYclJWWt2-VMnX4WM4Xc4S_8g-IL-_eJqjXgdssIk6oJIYBU8AaZAu1xz0_tFcmPPfwnbGMEJe_iB7N3k5YvBNh67VOMTH_0mrUcb6mTuNITyNBcjAxF1Vzg9XtAX6eVYi4",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
