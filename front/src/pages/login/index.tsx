@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import { SocialButtons } from '../../components/SocialButtons'
 import './login.css'
@@ -9,11 +10,13 @@ export function Login() {
   const [showPassword, setShowPassword] = useState(false)
 
   const { signIn } = useContext(AuthContext)
+  const navigate = useNavigate()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
       await signIn({ email, password })
+      navigate('/')
     } catch (error) {
       console.error(error)
     }

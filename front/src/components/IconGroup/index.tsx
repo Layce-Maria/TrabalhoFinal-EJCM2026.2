@@ -1,4 +1,4 @@
-import "./iconGroup.css"
+import "./IconGroup.css"
 import { Truck, Shield, RotateCcw } from 'lucide-react'
 
 export function IconGroup(){

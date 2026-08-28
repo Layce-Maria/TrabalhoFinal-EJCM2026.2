@@ -1,5 +1,8 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import './product.css'
+import { api } from '../../services/api'
+import { AuthContext } from '../../contexts/AuthContext'
 import calcajeans1 from '../../assets/products/calcajeans1.jpg'
 import calcajeans2 from '../../assets/products/calcajeans2.jpg'
 import calcajeans3 from '../../assets/products/calcajeans3.jpg'
@@ -8,15 +11,23 @@ import sweater from '../../assets/products/sweater.jpg'
 import tenis from '../../assets/products/tenis.jpg'
 import vestido from '../../assets/products/vestido.jpg'
 
+type ApiProduct = {
+  id: string
+  name: string
+  description: string
+  price: number
+  rating: number | null
+}
 
-const product = {
+type WishlistApiItem = {
+  productId: string
+}
+
+// mock
+const productDisplay = {
   breadcrumb: ['Home', 'Sale'],
-  name: 'Comfort Slim Jeans',
   brand: 'STYLE Premium',
   tags: ['Tops', 'Sale'],
-  rating: 4.7,
-  reviewsCount: 203,
-  price: 79,
   originalPrice: 99,
   discountPercent: 41,
   stockLeft: 12,
@@ -28,8 +39,6 @@ const product = {
   ],
   sizes: ['XS', 'S', 'M', 'L', 'XL'],
   maxQuantity: 12,
-  description:
-    'Make your move with our Comfort Jeans Collection. These premium fitted, ultra-soft jeans are designed for the ultimate feel-good experience. Featuring a super soft, stretchy slim-fit, our jeans offer the perfect combination of style and comfort.',
   keyFeatures: [
     'Premium fitted, ultra-soft jeans with signature four-way stretch.',
     'Classic stitch with 5 pockets.',
@@ -58,23 +67,107 @@ const relatedProducts: RelatedProduct[] = [
 type Tab = 'description' | 'specifications' | 'reviews'
 
 export function Product() {
-  const [selectedColor, setSelectedColor] = useState(product.colors[0].name)
+  const { id } = useParams<{ id: string }>()
+  const { user } = useContext(AuthContext)
+
+  const [product, setProduct] = useState<ApiProduct | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [isWishlisted, setIsWishlisted] = useState(false)
+
+  const [selectedColor, setSelectedColor] = useState(productDisplay.colors[0].name)
   const [selectedSize, setSelectedSize] = useState('XL')
   const [quantity, setQuantity] = useState(1)
   const [activeImage, setActiveImage] = useState(0)
   const [activeTab, setActiveTab] = useState<Tab>('description')
 
+  useEffect(() => {
+    if (!id) return
+    let active = true
+    setLoading(true)
+    setError(null)
+
+    api
+      .get<ApiProduct>(`/products/${id}`)
+      .then((response) => {
+        if (active) setProduct(response.data)
+      })
+      .catch(() => {
+        if (active) setError('Não foi possível carregar este produto.')
+      })
+      .finally(() => {
+        if (active) setLoading(false)
+      })
+
+    return () => {
+      active = false
+    }
+  }, [id])
+
+  useEffect(() => {
+    if (!user || !id) return
+    let active = true
+
+    api
+      .get<WishlistApiItem[]>(`/wishlist/${user.id}`)
+      .then((response) => {
+        if (active) setIsWishlisted(response.data.some((item) => item.productId === id))
+      })
+      .catch(() => {})
+
+    return () => {
+      active = false
+    }
+  }, [user, id])
+
+  const toggleWishlist = async () => {
+    if (!user || !id) return
+
+    if (isWishlisted) {
+      setIsWishlisted(false)
+      try {
+        await api.delete(`/wishlist/${user.id}/product/${id}`)
+      } catch {
+        setIsWishlisted(true)
+      }
+      return
+    }
+
+    setIsWishlisted(true)
+    try {
+      await api.post(`/wishlist/${user.id}`, { productId: id })
+    } catch {
+      setIsWishlisted(false)
+    }
+  }
+
   const decreaseQuantity = () => setQuantity((q) => Math.max(1, q - 1))
-  const increaseQuantity = () => setQuantity((q) => Math.min(product.maxQuantity, q + 1))
+  const increaseQuantity = () => setQuantity((q) => Math.min(productDisplay.maxQuantity, q + 1))
 
   const showPrevImage = () =>
-    setActiveImage((i) => (i - 1 + product.images.length) % product.images.length)
-  const showNextImage = () => setActiveImage((i) => (i + 1) % product.images.length)
+    setActiveImage((i) => (i - 1 + productDisplay.images.length) % productDisplay.images.length)
+  const showNextImage = () => setActiveImage((i) => (i + 1) % productDisplay.images.length)
+
+  if (loading) {
+    return (
+      <main className="product-page">
+        <p>Carregando produto...</p>
+      </main>
+    )
+  }
+
+  if (error || !product) {
+    return (
+      <main className="product-page">
+        <p>{error ?? 'Produto não encontrado.'}</p>
+      </main>
+    )
+  }
 
   return (
     <main className="product-page">
       <nav className="breadcrumb" aria-label="Breadcrumb">
-        {product.breadcrumb.map((crumb) => (
+        {productDisplay.breadcrumb.map((crumb) => (
           <span key={crumb}>
             <a href="#">{crumb}</a>
             <span className="breadcrumb-sep">/</span>
@@ -86,9 +179,15 @@ export function Product() {
       <div className="product-main">
         <section className="product-gallery">
           <div className="gallery-main">
-            <span className="discount-badge">-{product.discountPercent}%</span>
-            <button className="wishlist-btn" aria-label="Add to wishlist">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <span className="discount-badge">-{productDisplay.discountPercent}%</span>
+            <button
+              className={`wishlist-btn${isWishlisted ? ' wishlist-btn-active' : ''}`}
+              aria-label="Add to wishlist"
+              onClick={toggleWishlist}
+              disabled={!user}
+              title={user ? undefined : 'Faça login para favoritar'}
+            >
+              <svg viewBox="0 0 24 24" fill={isWishlisted ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
               </svg>
             </button>
@@ -106,13 +205,13 @@ export function Product() {
 
             <img
               className="gallery-main-image"
-              src={product.images[activeImage]}
+              src={productDisplay.images[activeImage]}
               alt={product.name}
             />
           </div>
 
           <div className="gallery-thumbs">
-            {product.images.map((image, index) => (
+            {productDisplay.images.map((image, index) => (
               <button
                 key={index}
                 className={`thumb${index === activeImage ? ' thumb-active' : ''}`}
@@ -127,13 +226,13 @@ export function Product() {
 
         <section className="product-info">
           <div className="product-tags">
-            {product.tags.map((tag) => (
+            {productDisplay.tags.map((tag) => (
               <span key={tag} className="tag-pill">{tag}</span>
             ))}
           </div>
 
           <h1 className="product-name">{product.name}</h1>
-          <p className="product-brand">{product.brand}</p>
+          <p className="product-brand">{productDisplay.brand}</p>
 
           <div className="product-rating">
             <span className="stars" aria-hidden="true">
@@ -141,25 +240,24 @@ export function Product() {
                 <svg
                   key={index}
                   viewBox="0 0 24 24"
-                  className={index < Math.round(product.rating) ? 'star star-filled' : 'star'}
+                  className={index < Math.round(product.rating ?? 0) ? 'star star-filled' : 'star'}
                 >
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               ))}
             </span>
-            <span className="rating-value">{product.rating}</span>
-            <span className="rating-count">({product.reviewsCount} reviews)</span>
+            <span className="rating-value">{product.rating ?? 0}</span>
           </div>
 
           <div className="product-price-row">
             <span className="price-current">${product.price}</span>
-            <span className="price-original">${product.originalPrice}</span>
+            <span className="price-original">${productDisplay.originalPrice}</span>
             <span className="low-stock-badge">Low Stock</span>
           </div>
 
           <p className="stock-status">
             <span className="stock-dot" />
-            In Stock ({product.stockLeft} left)
+            In Stock ({productDisplay.stockLeft} left)
           </p>
 
           <hr className="divider" />
@@ -167,7 +265,7 @@ export function Product() {
           <div className="option-group">
             <span className="option-label">Color</span>
             <div className="color-options">
-              {product.colors.map((color) => (
+              {productDisplay.colors.map((color) => (
                 <button
                   key={color.name}
                   className={`color-swatch${color.name === selectedColor ? ' color-swatch-active' : ''}`}
@@ -186,7 +284,7 @@ export function Product() {
               <a href="#" className="size-guide-link">Size Guide</a>
             </div>
             <div className="size-options">
-              {product.sizes.map((size) => (
+              {productDisplay.sizes.map((size) => (
                 <button
                   key={size}
                   className={`size-btn${size === selectedSize ? ' size-btn-active' : ''}`}
@@ -216,12 +314,12 @@ export function Product() {
                   type="button"
                   aria-label="Increase quantity"
                   onClick={increaseQuantity}
-                  disabled={quantity >= product.maxQuantity}
+                  disabled={quantity >= productDisplay.maxQuantity}
                 >
                   +
                 </button>
               </div>
-              <span className="max-items-note">Max {product.maxQuantity} items</span>
+              <span className="max-items-note">Max {productDisplay.maxQuantity} items</span>
             </div>
           </div>
 
@@ -301,7 +399,7 @@ export function Product() {
             className={`tab-btn${activeTab === 'reviews' ? ' tab-btn-active' : ''}`}
             onClick={() => setActiveTab('reviews')}
           >
-            Reviews ({product.reviewsCount})
+            Reviews
           </button>
         </div>
 
@@ -311,7 +409,7 @@ export function Product() {
               <p>{product.description}</p>
               <p className="key-features-title">Key Features</p>
               <ul className="key-features-list">
-                {product.keyFeatures.map((feature) => (
+                {productDisplay.keyFeatures.map((feature) => (
                   <li key={feature}>{feature}</li>
                 ))}
               </ul>

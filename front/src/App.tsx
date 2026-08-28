@@ -4,6 +4,8 @@ import { TopBanner } from './components/TopBanner'
 import { Header } from './components/Header'
 import { Login } from './pages/login'
 import { Home } from './pages/home'
+import { Product } from './pages/product/product'
+import { Wishlist } from './pages/wishlist/wishlist'
 import './App.css'
 import Signup from './pages/Signup/Signup'
 
@@ -18,6 +20,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
 
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/wishlist" element={<Wishlist />} />
         </Routes>
       </div>
     </AuthProvider>
